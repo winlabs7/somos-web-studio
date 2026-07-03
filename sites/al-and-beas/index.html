@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al & Bea's Mexican Food — Boyle Heights Since 1971</title>
+<style>
+  :root{--masa:#f4e4c1;--chile:#c1272d;--mole:#3b2314;--verde:#2f6b3f;--cream:#fbf6ec;--ink:#241a12}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{padding-bottom:64px;font-family:'Georgia',serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  header{background:var(--mole);color:var(--masa);text-align:center;padding:54px 20px 46px;position:relative}
+  .est{letter-spacing:.35em;font-size:12px;text-transform:uppercase;opacity:.8}
+  header h1{font-size:44px;margin:10px 0 6px;font-family:'Georgia',serif;letter-spacing:.5px}
+  header .tag{font-style:italic;font-size:18px;color:#f0c96b}
+  .flag{height:5px;background:linear-gradient(90deg,var(--verde) 33%,#fff 33% 66%,var(--chile) 66%)}
+  section{padding:44px 0}
+  h2{font-size:26px;color:var(--chile);margin-bottom:18px;border-bottom:2px solid #e6d3a8;padding-bottom:8px}
+  .lead{font-size:19px;max-width:70ch}
+  .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:12px}
+  .item{background:#fff;border:1px solid #e6d3a8;border-radius:10px;padding:18px}
+  .item h3{color:var(--mole);font-size:19px}
+  .item .price{float:right;color:var(--verde);font-weight:bold}
+  .item p{font-size:14px;color:#6b5a45;font-style:italic}
+  .cashbox{background:#fff5e0;border:2px dashed var(--chile);border-radius:12px;padding:22px;text-align:center;margin-top:16px}
+  .cashbox b{color:var(--chile)}
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .info div{background:#fff;border-radius:10px;padding:20px;border:1px solid #e6d3a8}
+  footer{background:var(--mole);color:var(--masa);text-align:center;padding:30px;font-size:14px}
+  .sticky{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:99}
+  .sticky a{flex:1;padding:16px;text-align:center;color:#fff;text-decoration:none;font-weight:bold;font-family:sans-serif;font-size:15px}
+  .call{background:var(--verde)}.dir{background:var(--chile)}
+  @media(max-width:600px){.info{grid-template-columns:1fr}header h1{font-size:34px}body{padding-bottom:56px}}
+</style>
+</head>
+<body>
+<div class="flag"></div>
+<header>
+  <div class="est">Boyle Heights · Est. 1971</div>
+  <h1>Al & Bea's Mexican Food</h1>
+  <div class="tag">The Eastside's original bean &amp; cheese burrito</div>
+</header>
+
+<section class="wrap">
+  <h2>Half a century on East 1st Street</h2>
+  <p class="lead">No frills. No shortcuts. Just the bean &amp; cheese burrito that Boyle Heights has lined up for since 1971 — made the same way, by the same family, for three generations of the neighborhood. <em>Como siempre.</em></p>
+  <div class="cashbox">
+    💵 <b>Cash only</b> — it's how we keep prices honest. &nbsp;|&nbsp; ATM one block west at 1st &amp; Chicago St.
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>The Menu · El Menú</h2>
+  <div class="menu">
+    <div class="item"><h3>Bean &amp; Cheese <span class="price">$4.50</span></h3><p>The legend. Add red or green chile.</p></div>
+    <div class="item"><h3>Chile Relleno Burrito <span class="price">$6.75</span></h3><p>Roasted, stuffed, wrapped. A meal.</p></div>
+    <div class="item"><h3>Machaca Plate <span class="price">$9.00</span></h3><p>Shredded beef, eggs, rice &amp; beans.</p></div>
+    <div class="item"><h3>Tacos Dorados <span class="price">$5.50</span></h3><p>Crispy, three to an order.</p></div>
+  </div>
+  <p style="margin-top:12px;font-style:italic;color:#6b5a45">Full menu at the counter — print version below.</p>
+</section>
+
+<section class="wrap">
+  <div class="info">
+    <div>
+      <h2 style="font-size:20px;border:none">Visit · Visítanos</h2>
+      <p>2025 East 1st Street<br>Boyle Heights, Los Angeles, CA</p>
+      <p style="margin-top:8px"><b>Open</b> Mon–Sat · 6am–7pm<br>Sunday · 7am–3pm</p>
+    </div>
+    <div>
+      <h2 style="font-size:20px;border:none">Order ahead · Ordena</h2>
+      <p>Call and it's ready when you are.</p>
+      <p style="font-size:24px;color:var(--verde);font-weight:bold;margin-top:8px">(323) 267-8810</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Al &amp; Bea's Mexican Food · 2025 E 1st St, Los Angeles · (323) 267-8810<br>
+  <span style="opacity:.7">Family-owned since 1971 · Cash only · Se habla español</span>
+</footer>
+
+<div class="sticky">
+  <a class="call" href="tel:+13232678810">📞 Call to Order</a>
+  <a class="dir" href="https://maps.google.com/?q=2025+East+1st+Street+Los+Angeles">📍 Directions</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Cartel — Colombian Restaurant · Miami</title>
+<style>
+  :root{--amarillo:#ffcd00;--azul:#003893;--rojo:#ce1126;--night:#12121a;--paper:#fffdf7;--ink:#1a1a22}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{padding-bottom:64px;font-family:'Segoe UI',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+  header{background:linear-gradient(135deg,var(--night),#241f3a);color:#fff;padding:60px 20px;text-align:center;position:relative;overflow:hidden}
+  .bars{position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,var(--amarillo) 50%,var(--azul) 50% 75%,var(--rojo) 75%)}
+  header h1{font-size:52px;font-weight:800;letter-spacing:-1px;margin-bottom:4px}
+  header h1 span{color:var(--amarillo)}
+  .sub{font-size:19px;color:#d9d4ff;max-width:60ch;margin:10px auto 0}
+  .badge{display:inline-block;margin-top:18px;background:var(--amarillo);color:var(--night);font-weight:700;padding:8px 18px;border-radius:30px;font-size:14px}
+  section{padding:50px 0}
+  h2{font-size:30px;color:var(--azul);margin-bottom:8px;font-weight:800}
+  .es{color:var(--rojo);font-size:16px;font-weight:600;margin-bottom:20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .dish{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.09);border-top:4px solid var(--amarillo)}
+  .dish .ph{height:120px;background:linear-gradient(135deg,#ffe08a,#ffcd00);display:flex;align-items:center;justify-content:center;font-size:46px}
+  .dish .body{padding:16px}
+  .dish h3{color:var(--night);font-size:19px}
+  .dish .price{color:var(--rojo);font-weight:800;font-size:18px;float:right}
+  .dish p{font-size:14px;color:#666}
+  .strip{background:var(--azul);color:#fff;text-align:center;padding:40px 20px}
+  .strip h2{color:#fff}
+  .cta{display:inline-block;background:var(--amarillo);color:var(--night);font-weight:800;padding:15px 36px;border-radius:40px;text-decoration:none;font-size:17px;margin-top:14px}
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:10px}
+  .info div{background:#fff;border-radius:14px;padding:22px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+  footer{background:var(--night);color:#cfc9ff;text-align:center;padding:30px;font-size:14px}
+  .sticky{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:99}
+  .sticky a{flex:1;padding:16px;text-align:center;color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+  .order{background:var(--rojo)}.callb{background:var(--azul)}
+  @media(max-width:600px){.info{grid-template-columns:1fr}header h1{font-size:38px}body{padding-bottom:56px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bars"></div>
+  <h1>El <span>Cartel</span></h1>
+  <p class="sub">The unmistakable taste of Colombia — arepas, bandeja paisa, and Calle Ocho energy in the heart of Miami.</p>
+  <div class="badge">🇨🇴 Comida Colombiana Auténtica</div>
+</header>
+
+<section class="wrap">
+  <h2>What we serve</h2>
+  <p class="es">Lo que servimos</p>
+  <div class="grid">
+    <div class="dish"><div class="ph">🫓</div><div class="body"><h3>Arepa de Queso <span class="price">$6</span></h3><p>Griddled corn cake, molten cheese pull.</p></div></div>
+    <div class="dish"><div class="ph">🍛</div><div class="body"><h3>Bandeja Paisa <span class="price">$18</span></h3><p>The full plate — beans, rice, chicharrón, egg, plantain.</p></div></div>
+    <div class="dish"><div class="ph">🥩</div><div class="body"><h3>Churrasco <span class="price">$22</span></h3><p>Grilled skirt steak, chimichurri, sides.</p></div></div>
+    <div class="dish"><div class="ph">🥤</div><div class="body"><h3>Jugos Naturales <span class="price">$5</span></h3><p>Lulo, maracuyá, mora — fresh daily.</p></div></div>
+  </div>
+</section>
+
+<div class="strip">
+  <h2>Order for pickup in one tap</h2>
+  <p>Hot, fast, and ready when you walk in.</p>
+  <a class="cta" href="tel:+13053587800">📞 Order Now · Ordena Ya</a>
+</div>
+
+<section class="wrap">
+  <div class="info">
+    <div>
+      <h2 style="font-size:22px">📍 Find us</h2>
+      <p>194 Southeast 1st Avenue<br>Downtown / Little Havana, Miami, FL</p>
+      <p style="margin-top:8px"><b>Open daily</b> · 11am–10pm</p>
+    </div>
+    <div>
+      <h2 style="font-size:22px">📞 Call</h2>
+      <p style="font-size:26px;color:var(--rojo);font-weight:800">(305) 358-7800</p>
+      <p>Pickup &amp; catering · Se habla español</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  El Cartel Colombian Restaurant · 194 SE 1st Ave, Miami, FL · (305) 358-7800<br>
+  <span style="opacity:.6">Auténtica cocina colombiana · Open daily 11–10</span>
+</footer>
+
+<div class="sticky">
+  <a class="order" href="tel:+13053587800">🍽️ Order Now</a>
+  <a class="callb" href="https://maps.google.com/?q=194+SE+1st+Ave+Miami">📍 Directions</a>
+</div>
+</body>
+</html>

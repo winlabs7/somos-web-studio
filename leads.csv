@@ -1,0 +1,160 @@
+score,name,type,metro,phone,address,cuisine,est_price
+19,Al & Bea's Mexican Food,restaurant,LA_BoyleHeights,+1 323-267-8810,2025 East 1st Street,mexican,$500
+19,Santa Cecilia Restaurant,restaurant,LA_BoyleHeights,+1-323-980-0716,1707 Pleasant Avenue,mexican,$500
+19,X'tiosu Kitchen,restaurant,LA_BoyleHeights,+1-323-526-8844,923 Forest Avenue,mediterranean,$500
+19,El Cartel Colombian Restaurant,restaurant,Miami_LittleHavana,+1-305-358-7800,194 Southeast 1st Avenue,latin_american,$500
+19,Camila's Restaurante Brasileiro,restaurant,Miami_LittleHavana,+1 305-375-0992,129 Southeast 1st Avenue,brazilian,$500
+19,Chick'n Grill,restaurant,Miami_LittleHavana,+1-786-621-4800,250 Southwest 8th Street,chicken,$500
+19,La Moon,restaurant,Miami_LittleHavana,+1-305-860-6209,97 Southwest 8th Street,latin;columbia,$500
+19,Little Bread Cuban Sandwich Co.,restaurant,Miami_LittleHavana,+1-786-420-2672,541 Southwest 12th Avenue,cuban,$500
+19,The Henry,restaurant,Miami_LittleHavana,+1-786-471-0070,701 South Miami Avenue,american,$500
+19,Rey's Pizza,restaurant,Miami_LittleHavana,+1-305-856-7535,2391 West Flagler Street,pizza;cuban,$500
+19,Señor Veggie,restaurant,SanAntonio_Southside,+1-210-228-0073,620 South Presa Street,mexican,$500
+19,Topaz Dentistry and Braces,dentist,SanAntonio_Southside,+1-254-382-8717,3850 South New Braunfels Avenue,,$750
+19,Battalion,restaurant,SanAntonio_Southside,+1-210-816-0088,604 South Alamo Street,italian,$500
+18,La Tijera de Oro,beauty,Hialeah_FL,+1-305-822-8802,3974 Palm Avenue,,$500
+18,La Canasta,restaurant,LA_BoyleHeights,+1-323-269-2562,4112 Whittier Boulevard,,$500
+18,Yisell Bakery & Coffee,bakery,Miami_LittleHavana,+1-305-856-8141,1356,,$500
+18,Amarres de amor Florida,restaurant,Miami_LittleHavana,+1-786-755-8139,43 Northeast 1st Street,,$500
+18,Russian volume by Vizavi Lashes,beauty,Miami_LittleHavana,+1 772-275-8888,175 Southwest 7th Street,,$500
+18,Starbucks,cafe,Miami_LittleHavana,+1 786-238-7951,249 Northwest 6th Street,coffee_shop,$500
+18,Rico Bakery & Cafe,bakery,Miami_LittleHavana,+1-305-649-6241,425 Southwest 22nd Avenue,,$500
+18,Juice Fountain 305,cafe,Miami_LittleHavana,+1-305-619-2022,1310 NE 1st Avenue,juice,$500
+18,La Superior Bakery,bakery,SanAntonio_Southside,+1-210-924-1616,519 Pleasanton Rd,,$500
+18,Cafe Dubai,restaurant,SanAntonio_Southside,+1 726-210-6497,2711 South Flores Street,,$500
+17,Nicoya Fusion Cafe,cafe,Hialeah_FL,+1-786-299-0097,1426 West 49th Street,,$500
+17,Jesse's Barber Shop,hairdresser,LA_BoyleHeights,+1-323-522-8577,2626 East Cesar E Chavez Avenue,,$500
+17,Johanas Beauty salon & Barber shop,hairdresser,LA_BoyleHeights,+1-323-264-3024,4136 Whittier Boulevard,,$500
+17,Yia Caffe,cafe,LA_BoyleHeights,+1 323 685 2049,3557 East 3rd Street,,$500
+17,Acurrúcame Café,cafe,LA_BoyleHeights,+1-323-526-7219,2609 East Cesar E Chavez Avenue,,$500
+17,Guapos Barber Shop,hairdresser,SanAntonio_Southside,+1-210-606-2496,642 South Presa Street,,$500
+15,Delicias en Miami,restaurant,Miami_LittleHavana,+1-786-499-5213,,,$500
+13,Palenque Pizzeria,restaurant,Hialeah_FL,,2200,pizza,$500
+13,Tacos Virginia,restaurant,LA_BoyleHeights,,4081 Whittier Boulevard,mexican,$500
+13,El Cocodrilo,restaurant,LA_BoyleHeights,,4087 Whittier Boulevard,mexican,$500
+13,Pizza Hut,restaurant,LA_BoyleHeights,,3400 East 1st Street,pizza,$500
+13,123 Kids Dentistry of East LA,dentist,LA_BoyleHeights,,3845 East 3rd Street,,$750
+13,Mi Rinconcito Mexicano,restaurant,Miami_LittleHavana,,1961 Southwest 8th Street,mexican,$500
+13,El Taquito,restaurant,Miami_LittleHavana,,Southwest 8th Street,mexican,$500
+13,Epic Smiles Miami,dentist,Miami_LittleHavana,,2525 Southwest 8th Street,,$750
+13,Cajun Boil,restaurant,Miami_LittleHavana,,141 Southwest 7th Street,seafood,$500
+13,Taqueria El Ranchero de Jalisco,restaurant,SanAntonio_Southside,,505 Fair Avenue,mexican,$500
+13,El Chunky,restaurant,SanAntonio_Southside,,2620 South Presa Street,hot_dog;mexican,$500
+12,Peluqueria,beauty,Hialeah_FL,,1434 West 49th Street,,$500
+12,Lily's Elegant Nails & Beauty Salon,beauty,Houston_EastEnd,,5605 Lawndale Street,,$500
+12,Thank You Miami,restaurant,Miami_LittleHavana,,1663 West Flagler Street,,$500
+12,Crust,restaurant,Miami_LittleHavana,,668 Northwest 5th Street,,$500
+12,Manna Life Food,restaurant,Miami_LittleHavana,,80 Northeast 2nd Avenue,,$500
+12,Meraki Greek Bistro,restaurant,Miami_LittleHavana,,142 Southeast 1st Avenue,,$500
+12,Blackbird Ordinary,restaurant,Miami_LittleHavana,,729 Southwest 1st Avenue,,$500
+12,La Granja,restaurant,Miami_LittleHavana,,127 Southeast 2nd Avenue,,$500
+12,The Arketekt by Aficionados,restaurant,Miami_LittleHavana,,1200 Brickell Bay Drive,,$500
+12,Carolina Escobar Beauty Studio,beauty,Miami_LittleHavana,,1569 Northwest 17th Avenue,,$500
+12,Pastelmania Bakery,bakery,Miami_LittleHavana,,2015 West Flagler Street,,$500
+12,Bite Sandwich,cafe,Miami_LittleHavana,,1576 Southwest 1st Street,breakfast;coffee_shop;sandwich,$500
+12,Rosario's Cantina,restaurant,SanAntonio_Southside,,901 South Alamo Street,,$500
+12,Liberty Bar,restaurant,SanAntonio_Southside,,1111 South Alamo Street,,$500
+12,Bliss Restaurant,restaurant,SanAntonio_Southside,,926 S Presa Street,,$500
+12,My Tia's Mexican Restaurant,restaurant,SanAntonio_Southside,,514 Pleasanton Rd,,$500
+12,Hash Vegan Eatery,restaurant,SanAntonio_Southside,,5007 S Flores St,,$500
+12,Eight Ball Coffee,cafe,SanAntonio_Southside,,1432 South Saint Mary's Street,coffee_shop,$500
+11,The Hair Stop,hairdresser,Hialeah_FL,,243 Westward Drive,,$500
+11,Johnson Florist,florist,Houston_EastEnd,,5632 Lawndale Street,,$500
+11,Monterrey Barber Shop #2,hairdresser,Houston_EastEnd,,5634 Lawndale Street,,$500
+11,Casey Beauty Salon,hairdresser,LA_BoyleHeights,,4085 Whittier Boulevard,,$500
+11,Cafe Galleria,cafe,Miami_LittleHavana,,69 Southeast 1st Street,,$500
+11,Cafe Croissant,cafe,Miami_LittleHavana,,1684 Southwest 22nd Street,,$500
+11,Atlantis Cafe,cafe,Miami_LittleHavana,,12 Northwest 1st Street,,$500
+11,ALL DAY,cafe,Miami_LittleHavana,,1035 North Miami Avenue,,$500
+10,Cozy Corner,restaurant,Hialeah_FL,,,american,$500
+10,Sunny's Subs,restaurant,Hialeah_FL,,,sandwich,$500
+10,China King,restaurant,Hialeah_FL,,,chinese,$500
+10,Dentista,dentist,Hialeah_FL,,,,$750
+10,wayman pilot supplies,clothes,Hialeah_FL,,13491 Northwest 47th Avenue,,$500
+10,La Rampa,restaurant,Hialeah_FL,,,cuban,$500
+10,La Carne Asada,restaurant,Hialeah_FL,,,nicaraguan,$500
+10,Fritanga Hermanos Mendoza,restaurant,Hialeah_FL,,,nicaraguan,$500
+10,El Chico,restaurant,Hialeah_FL,,,cuban cocine,$500
+10,Aquario Dental,dentist,Houston_EastEnd,,,,$750
+10,Tire and Muffler,car_repair,LA_BoyleHeights,,East 3rd Street,,$500
+10,La Parrilla,restaurant,LA_BoyleHeights,,,mexican,$500
+10,Teen Dental Place,dentist,LA_BoyleHeights,,,,$750
+10,Kid's Dental Place,dentist,LA_BoyleHeights,,,,$750
+10,Western Dental,dentist,LA_BoyleHeights,,,,$750
+10,Pacific Dental,dentist,LA_BoyleHeights,,,,$750
+10,Las Flautas,restaurant,LA_BoyleHeights,,,mexican,$500
+10,El 7 Mares,restaurant,LA_BoyleHeights,,,seafood,$500
+10,Don Chuy,restaurant,LA_BoyleHeights,,,mexican,$500
+10,Birrieria Nochistlan Zac,restaurant,LA_BoyleHeights,,,mexican,$500
+10,Birria Los Socios,restaurant,LA_BoyleHeights,,,mexican,$500
+10,Tadeo's Fashion,clothes,LA_BoyleHeights,,4124 Whittier Boulevard,,$500
+10,Tilas,restaurant,LA_BoyleHeights,,,mexican,$500
+10,Mariscos Eso Y Mas,restaurant,LA_BoyleHeights,,,seafood,$500
+10,P.F. Chang's,restaurant,Miami_LittleHavana,,,asian,$500
+10,Vapiano,restaurant,Miami_LittleHavana,,,italian,$500
+10,El Nuevo Siglo,restaurant,Miami_LittleHavana,,,international,$500
+10,"García,s Seafood",restaurant,Miami_LittleHavana,,,seafood;fish,$500
+10,Abana Auto,car_repair,Miami_LittleHavana,,222 Southwest 22nd Avenue,,$500
+10,Fiesta Café Shop,restaurant,Miami_LittleHavana,,,peruvian,$500
+10,Yambo,restaurant,Miami_LittleHavana,,,nicaraguan,$500
+10,Burgerteca,restaurant,SanAntonio_Southside,,,burger,$500
+10,Pizza Hut,restaurant,SanAntonio_Southside,,,pizza,$500
+9,Porto Alegre Restaurant,restaurant,Hialeah_FL,,,,$500
+9,El Greco Greek,restaurant,Houston_EastEnd,,,,$500
+9,Sally's Beauty Supplies,beauty,Houston_EastEnd,,,,$500
+9,Le Q Nails,beauty,Houston_EastEnd,,,,$500
+9,D K Nail,beauty,Houston_EastEnd,,,,$500
+9,Otomisan Japanese Restaurant,restaurant,LA_BoyleHeights,,,,$500
+9,Maria's Bakery Inc.,bakery,LA_BoyleHeights,,,,$500
+9,Meatland Bakery,bakery,LA_BoyleHeights,,,,$500
+9,La Monarca,bakery,LA_BoyleHeights,,,,$500
+9,La Central,bakery,LA_BoyleHeights,,,,$500
+9,La Mascota Bakery,bakery,LA_BoyleHeights,,,,$500
+9,Wok Town,restaurant,Miami_LittleHavana,,,,$500
+9,New York Bagel Deli,restaurant,Miami_LittleHavana,,,,$500
+9,Sushi Sake,restaurant,Miami_LittleHavana,,,,$500
+9,Juan Valdez Café,cafe,Miami_LittleHavana,,,coffee_shop,$500
+9,Latin American,restaurant,Miami_LittleHavana,,,,$500
+9,Nusr-Et,restaurant,Miami_LittleHavana,,,,$500
+9,American Social,restaurant,Miami_LittleHavana,,,,$500
+9,Los Nuevos Jarritos,restaurant,Miami_LittleHavana,,,,$500
+9,Joe & The Juice,cafe,Miami_LittleHavana,,,coffee_shop,$500
+9,La Gazzetta,restaurant,Miami_LittleHavana,,,,$500
+9,Domain,cafe,Miami_LittleHavana,,,coffee_shop,$500
+9,Cafe Americano,cafe,Miami_LittleHavana,,,coffee_shop,$500
+9,Dr Smood,restaurant,Miami_LittleHavana,,,,$500
+9,Talkin' Tacos,restaurant,Miami_LittleHavana,,,,$500
+9,Cascabel's,restaurant,SanAntonio_Southside,,,,$500
+9,Halcyon,cafe,SanAntonio_Southside,,,coffee_shop,$500
+9,Titos,restaurant,SanAntonio_Southside,,,,$500
+9,Blessed Bets Boutique,beauty,SanAntonio_Southside,,,,$500
+8,Coral Sword,cafe,Houston_EastEnd,,,,$500
+8,Tepa Barber Shop,hairdresser,LA_BoyleHeights,,,,$500
+8,Skinny Louie,cafe,Miami_LittleHavana,,,,$500
+8,Bottega Express,cafe,Miami_LittleHavana,,,,$500
+8,American,cafe,Miami_LittleHavana,,,,$500
+8,Cure Cafe,cafe,Miami_LittleHavana,,,,$500
+8,Sabor Latino Café,cafe,Miami_LittleHavana,,,,$500
+8,Joe Blues,cafe,SanAntonio_Southside,,,,$500
+8,Madhatter's Tea House and Cafe,cafe,SanAntonio_Southside,,,,$500
+8,Steve's Sno Cone House,cafe,SanAntonio_Southside,,,,$500
+7,Carter's,clothes,Hialeah_FL,,,,$500
+7,Spoilers Etc,car_repair,Houston_EastEnd,,,,$500
+7,Children's & Bridal Etc.,clothes,Houston_EastEnd,,,,$500
+7,Fallas Paredes,clothes,Houston_EastEnd,,,,$500
+7,Melrose,clothes,Houston_EastEnd,,,,$500
+7,Mas por Menos Inc,clothes,Miami_LittleHavana,,,,$500
+7,Ché by Chelsey,clothes,Miami_LittleHavana,,,,$500
+7,IRO,clothes,Miami_LittleHavana,,,,$500
+7,Rhone,clothes,Miami_LittleHavana,,,,$500
+7,Orlebar Brown,clothes,Miami_LittleHavana,,,,$500
+7,Agent Provocateur,clothes,Miami_LittleHavana,,,,$500
+7,Psycho Bunny,clothes,Miami_LittleHavana,,,,$500
+7,Vilebrequin,clothes,Miami_LittleHavana,,,,$500
+7,Ted Baker,clothes,Miami_LittleHavana,,,,$500
+7,INTERMIX,clothes,Miami_LittleHavana,,,,$500
+7,Intimissimi,clothes,Miami_LittleHavana,,,,$500
+7,Lululemon,clothes,Miami_LittleHavana,,,,$500
+7,Victoria's Secret,clothes,Miami_LittleHavana,,,,$500
+7,Beach Bunny Swimwear,clothes,Miami_LittleHavana,,,,$500
+7,Live!,clothes,Miami_LittleHavana,,,,$500
