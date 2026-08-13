@@ -5,18 +5,15 @@ from pathlib import Path
 from analyze import run_and_store
 
 ROOT = Path(__file__).resolve().parent
+WEB = ROOT / "web"
 PORT = int(os.environ.get("PORT", "8080"))
 XAI = os.environ.get("XAI_API_KEY", "")
 LEADS = ROOT / "leads.jsonl"
 SCORES = ROOT / "scores.jsonl"
-HIDDEN = {
-    "/leads.jsonl", "/scores.jsonl", "/server.py", "/analyze.py",
-    "/_setkey.py", "/Procfile", "/railway.toml", "/requirements.txt",
-}
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=str(ROOT), **kwargs)
+        super().__init__(*args, directory=str(WEB), **kwargs)
 
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")
@@ -29,13 +26,6 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header("Content-Length", str(len(raw)))
         self.end_headers()
         self.wfile.write(raw)
-
-    def do_GET(self):
-        path = self.path.split("?", 1)[0]
-        if path in HIDDEN:
-            self.send_error(404)
-            return
-        return super().do_GET()
 
     def do_POST(self):
         length = int(self.headers.get("Content-Length") or 0)
