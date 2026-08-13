@@ -130,6 +130,16 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
 .ok{background:#e8f6ee;color:#14532d;padding:12px 14px;border-radius:12px;display:none}
 .ok.on{display:block}
 
+
+.voice-panel{display:none;background:var(--white);border:1px solid rgba(42,21,32,.12);border-radius:22px;padding:22px}
+.voice-panel.on{display:block}
+.v-status{font-weight:700;margin-bottom:10px}
+.v-log{max-height:240px;overflow:auto;background:var(--cream-2);border-radius:14px;padding:12px 14px;margin:12px 0}
+.v-line{font-size:.9rem;margin:6px 0}
+.v-line.ai{color:var(--wine)}
+.v-line.you{color:var(--wine-3)}
+.v-actions{display:flex;flex-wrap:wrap;gap:10px}
+
 @media (max-width:860px){
   .hero,.split,.grid-3,.plans,.rules,.doors{grid-template-columns:1fr}
   .plan.featured{transform:none}
@@ -151,7 +161,7 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
       <a href="#planes">Planes</a>
       <a href="#estudio">El estudio</a>
       <a href="#marcas">Marcas</a>
-      <a class="btn" href="#aplicar" style="padding:9px 18px;font-size:.82rem">Aplicar</a>
+      <a class="btn" href="#aplicar" style="padding:9px 18px;font-size:.82rem">Hablar</a>
     </div>
   </div>
 </nav>
@@ -224,7 +234,7 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
           <li>Tú sigues operando el contenido</li>
           <li>Para quien ya tiene ritmo y quiere pipeline</li>
         </ul>
-        <a class="btn btn-dark" href="#aplicar">Empezar</a>
+        <a class="btn btn-dark" href="#aplicar">Hablar</a>
       </div>
       <div class="plan featured">
         <div class="badge">El más pedido</div>
@@ -236,7 +246,7 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
           <li>Estudio y calendario</li>
           <li>Marcas encima de la operación</li>
         </ul>
-        <a class="btn" href="#aplicar">Quiero esto</a>
+        <a class="btn" href="#aplicar">Hablar</a>
       </div>
       <div class="plan">
         <h3>Socios</h3>
@@ -247,7 +257,7 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
           <li>Lanzamos productos con tu marca</li>
           <li>Se construye, no se aplica masivo</li>
         </ul>
-        <a class="btn btn-dark" href="#aplicar">Conversemos</a>
+        <a class="btn btn-dark" href="#aplicar">Hablar</a>
       </div>
     </div>
   </div>
@@ -274,13 +284,13 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
     <div class="doors">
       <a class="door a" href="#aplicar">
         <span class="eyebrow" style="color:var(--gold)">Para creadores</span>
-        <h3>Auditoría de 30 minutos</h3>
-        <p>Vemos tu material. Te decimos qué plan encaja. Sin compromiso.</p>
+        <h3>Entrevista de voz</h3>
+        <p>Cuatro minutos. Handle, nicho, qué necesitas. Sin formulario.</p>
       </a>
       <a class="door b" href="#aplicar">
         <span class="eyebrow" style="color:var(--gold)">Para marcas</span>
-        <h3>Brief de campaña</h3>
-        <p>Cuéntanos marca, objetivo y timing. Armamos el roster desde Laureles.</p>
+        <h3>Brief por voz</h3>
+        <p>Marca, campaña y timing. La misma línea, otro camino.</p>
       </a>
     </div>
   </div>
@@ -289,35 +299,22 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
 <section id="aplicar">
   <div class="wrap split">
     <div>
-      <span class="eyebrow">Aplicar</span>
-      <h2>Cuéntanos quién eres.</h2>
-      <p class="lede">Si ya tienes audiencia —sobre todo si vienes de un reality o un programa— y quieres que alguien opere el resto, este es el formulario.</p>
-      <div class="tabs">
-        <button type="button" class="tab on" data-tab="creador">Soy creador</button>
-        <button type="button" class="tab" data-tab="marca">Soy marca</button>
+      <span class="eyebrow">Hablar con la casa</span>
+      <h2>Una entrevista de voz. Cuatro minutos.</h2>
+      <p class="lede">Sin formulario. Un agente de La Casa te pregunta handle, nicho y qué necesitas — o el brief si eres marca. El equipo humano sigue después por WhatsApp.</p>
+      <div class="hero-cta" style="margin-top:22px">
+        <button class="btn" type="button" id="btn-creador">Hablar como creador</button>
+        <button class="btn btn-dark" type="button" id="btn-marca">Hablar como marca</button>
       </div>
     </div>
     <div>
-      <p class="ok" id="ok">Listo. Te escribimos por WhatsApp o correo.</p>
-      <div class="form-panel on" id="panel-creador">
-        <form id="form-creador">
-          <div><label for="c-nombre">Nombre</label><input id="c-nombre" name="nombre" required></div>
-          <div><label for="c-wa">WhatsApp</label><input id="c-wa" name="whatsapp" required placeholder="+57"></div>
-          <div><label for="c-ig">Instagram o TikTok</label><input id="c-ig" name="handle" required placeholder="@tuusuario"></div>
-          <div><label for="c-ciudad">Ciudad</label><input id="c-ciudad" name="ciudad" required placeholder="Medellín"></div>
-          <div><label for="c-hace">Qué haces</label><textarea id="c-hace" name="que_haces" required placeholder="Streaming, comedia, lifestyle, food, podcast…"></textarea></div>
-          <button class="btn" type="submit">Pedir auditoría</button>
-          <p class="note">30 minutos. Sin compromiso. No hay que mudarse a ninguna casa.</p>
-        </form>
-      </div>
-      <div class="form-panel" id="panel-marca">
-        <form id="form-marca">
-          <div><label for="m-marca">Marca</label><input id="m-marca" name="marca" required></div>
-          <div><label for="m-contacto">Nombre y correo o WhatsApp</label><input id="m-contacto" name="contacto" required></div>
-          <div><label for="m-campana">Campaña</label><textarea id="m-campana" name="campana" required placeholder="Objetivo, timing, si hay presupuesto de referencia"></textarea></div>
-          <button class="btn" type="submit">Enviar brief</button>
-          <p class="note">Respondemos con roster y propuesta de set, no con un PDF genérico.</p>
-        </form>
+      <div class="voice-panel" id="voice-panel">
+        <p class="v-status" id="voice-status">Listo cuando toques hablar.</p>
+        <div class="v-log" id="voice-log"></div>
+        <div class="v-actions">
+          <button class="btn btn-dark" type="button" id="btn-hang">Colgar</button>
+        </div>
+        <p class="note">Usa audífonos si puedes. Pedimos el micrófono solo para esta llamada.</p>
       </div>
     </div>
   </div>
@@ -340,37 +337,20 @@ footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size
       <p>Creative Commerce · Laureles, Medellín</p>
     </div>
     <div>
-      <p><a href="#aplicar">Aplicar</a> · <a href="#marcas">Marcas</a> · <a href="#planes">Planes</a></p>
+      <p><a href="#aplicar">Hablar</a> · <a href="#marcas">Marcas</a> · <a href="#planes">Planes</a></p>
       <p style="opacity:.6;margin-top:8px">© 2026 Creative Commerce. Tú eres dueño de tus cuentas.</p>
     </div>
   </div>
 </footer>
+<script src="voice.js"></script>
 <script>
 const menuBtn=document.getElementById('menuBtn');
 const navLinks=document.getElementById('navLinks');
 menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
-document.querySelectorAll('.tab').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-    tab.classList.add('on');
-    document.querySelectorAll('.form-panel').forEach(p=>p.classList.remove('on'));
-    document.getElementById('panel-'+tab.dataset.tab).classList.add('on');
-  });
-});
-function handle(form){
-  form.addEventListener('submit',e=>{
-    e.preventDefault();
-    const data=Object.fromEntries(new FormData(form).entries());
-    const subject=form.id==='form-creador'?'Aplicación creador — Casa de los Creadores':'Brief de marca — Casa de los Creadores';
-    const body=Object.entries(data).map(([k,v])=>k+': '+v).join('\n');
-    window.location.href='mailto:hola@casacreadores.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-    document.getElementById('ok').classList.add('on');
-    form.reset();
-  });
-}
-handle(document.getElementById('form-creador'));
-handle(document.getElementById('form-marca'));
+document.getElementById('btn-creador').addEventListener('click',()=>CasaVoice.start('creador'));
+document.getElementById('btn-marca').addEventListener('click',()=>CasaVoice.start('marca'));
+document.getElementById('btn-hang').addEventListener('click',()=>{CasaVoice.stop();document.getElementById('voice-status').textContent='Llamada cerrada.';});
 </script>
 </body>
 </html>
