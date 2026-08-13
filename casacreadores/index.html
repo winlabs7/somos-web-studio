@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Casa de los Creadores · Agencia de talento</title>
+<meta name="description" content="Agencia de talento en Laureles, Medellín. Representamos creadores e influencers de todos los tipos: clipping, cuentas por país, edición, comunidad y marcas. Tú creas. Nosotros operamos.">
+<meta property="og:title" content="La Casa de los Creadores">
+<meta property="og:description" content="Tu carrera, operada como un negocio. Agencia de talento en Medellín.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casacreadores.co">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF7F1;
+  --cream-2:#F6EFE6;
+  --wine:#2A1520;
+  --wine-2:#241019;
+  --wine-3:#4A1E33;
+  --wine-4:#7A2540;
+  --pink:#DA4E78;
+  --pink-2:#C84E74;
+  --gold:#C49A4A;
+  --olive:#7E8A45;
+  --olive-2:#9AAB57;
+  --muted:#8b7480;
+  --white:#fff;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Archivo,system-ui,sans-serif;background:var(--cream);color:var(--wine);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.02em}
+.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700;color:var(--pink-2);margin-bottom:12px}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--pink);color:var(--white);padding:13px 26px;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(218,78,120,.28);background:var(--pink-2)}
+.btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(251,247,241,.45)}
+.btn-ghost:hover{background:rgba(251,247,241,.08);box-shadow:none}
+.btn-dark{background:var(--wine);color:var(--cream)}
+.btn-dark:hover{background:var(--wine-3);box-shadow:0 10px 24px rgba(42,21,32,.25)}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(42,21,32,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
+.logo{font-family:Fraunces,serif;font-size:1.15rem;font-weight:600;text-decoration:none;color:var(--wine)}
+.logo span{display:block;font-family:Archivo,sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+.nav-links{display:flex;gap:22px;align-items:center;font-size:.88rem;font-weight:500}
+.nav-links a{text-decoration:none;opacity:.8}
+.nav-links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--wine)}
+
+.hero{padding:72px 0 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.3rem);margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--wine-4)}
+.hero p.lead{font-size:1.12rem;max-width:36em;color:var(--wine-3);margin-bottom:28px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:var(--white);border:1px solid rgba(42,21,32,.08);border-radius:14px;padding:16px 14px}
+.stat b{display:block;font-family:Fraunces,serif;font-size:1.45rem;color:var(--wine)}
+.stat span{font-size:.75rem;color:var(--muted);font-weight:600;letter-spacing:.02em}
+.hero-card{background:linear-gradient(160deg,var(--wine) 0%,var(--wine-3) 55%,#7A2540 100%);color:var(--cream);border-radius:28px;padding:36px 32px;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.hero-card::before{content:"";position:absolute;inset:-40% -20% auto auto;width:280px;height:280px;background:radial-gradient(circle,rgba(196,154,74,.45),transparent 70%);pointer-events:none}
+.hero-card .tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.hero-card h3{font-size:1.85rem;margin-bottom:10px}
+.hero-card p{opacity:.88;font-weight:400}
+
+section{padding:88px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.wine{background:var(--wine);color:var(--cream)}
+.wine .eyebrow{color:var(--gold)}
+.wine h2{color:var(--cream)}
+h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:16px}
+.lede{font-size:1.05rem;max-width:38em}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.card{background:var(--white);border:1px solid rgba(42,21,32,.08);border-radius:var(--radius);padding:24px}
+.wine .card{background:rgba(251,247,241,.06);border-color:rgba(251,247,241,.12);color:var(--cream)}
+.card h3{font-size:1.25rem;margin:8px 0 8px}
+.card p{font-size:.95rem;opacity:.88}
+.num{font-family:Fraunces,serif;color:var(--pink);font-size:1.1rem;font-weight:600}
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;align-items:stretch}
+.plan{background:var(--white);border:1px solid rgba(42,21,32,.1);border-radius:22px;padding:28px 24px;display:flex;flex-direction:column}
+.plan.featured{background:var(--wine);color:var(--cream);border:0;transform:scale(1.03)}
+.plan .price{font-family:Fraunces,serif;font-size:1.7rem;margin:8px 0 6px}
+.plan ul{list-style:none;margin:16px 0 22px;flex:1}
+.plan li{padding:7px 0 7px 18px;position:relative;font-size:.92rem}
+.plan li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--pink)}
+.plan.featured li::before{background:var(--gold)}
+.badge{display:inline-block;background:var(--gold);color:var(--wine-2);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.rule{background:var(--cream-2);border-radius:14px;padding:18px 18px}
+.rule strong{display:block;margin-bottom:4px}
+
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
+.door{border-radius:22px;padding:32px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none}
+.door.a{background:linear-gradient(180deg,#4A1E33,#2A1520);color:var(--cream)}
+.door.b{background:linear-gradient(180deg,#7E8A45,#4A1E33);color:var(--cream)}
+.door h3{font-size:1.8rem;margin-bottom:8px}
+
+form{display:grid;gap:12px}
+label{font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(42,21,32,.14);background:#fff;font:inherit;color:var(--wine)}
+textarea{min-height:110px;resize:vertical}
+.tabs{display:flex;gap:8px;margin:22px 0}
+.tab{border:1px solid rgba(42,21,32,.14);background:#fff;border-radius:999px;padding:8px 16px;font-weight:700;cursor:pointer}
+.tab.on{background:var(--wine);color:var(--cream);border-color:var(--wine)}
+.form-panel{display:none}
+.form-panel.on{display:block}
+.note{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+.faq details{border-bottom:1px solid rgba(42,21,32,.1);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:700;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{margin-top:8px;color:var(--wine-3)}
+
+footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.foot a{color:var(--cream);opacity:.75;text-decoration:none}
+.ok{background:#e8f6ee;color:#14532d;padding:12px 14px;border-radius:12px;display:none}
+.ok.on{display:block}
+
+@media (max-width:860px){
+  .hero,.split,.grid-3,.plans,.rules,.doors{grid-template-columns:1fr}
+  .plan.featured{transform:none}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px 22px 22px;border-bottom:1px solid rgba(42,21,32,.08);align-items:flex-start}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .hero{padding-top:36px}
+  .hero-card{min-height:280px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#inicio">La Casa de los Creadores<span>Creative Commerce · Medellín</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menú">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#hacemos">Qué hacemos</a>
+      <a href="#planes">Planes</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#marcas">Marcas</a>
+      <a class="btn" href="#aplicar" style="padding:9px 18px;font-size:.82rem">Aplicar</a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap hero" id="inicio">
+  <div>
+    <span class="eyebrow">Agencia de talento · Laureles</span>
+    <h1>Tu carrera, <em>operada</em> como un negocio.</h1>
+    <p class="lead">Representamos creadores e influencers de todos los tipos. Tú grabas. Nosotros cortamos, publicamos, negociamos y cobramos. En Colombia, México y Estados Unidos.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#aplicar">Soy creador</a>
+      <a class="btn btn-dark" href="#marcas">Soy marca</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>20</b><span>sets de streaming</span></div>
+      <div class="stat"><b>14</b><span>cuentas ya operadas</span></div>
+      <div class="stat"><b>3</b><span>pisos de casa de contenido</span></div>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <div class="tag">La diferencia</div>
+    <h3>No somos una agencia de llamadas.</h3>
+    <p>Somos el equipo de operaciones que te faltaba: estudio, editores, comunidad y cuentas por país. 48 horas de grabación = un mes de contenido publicado.</p>
+  </aside>
+</header>
+
+<section class="wine" id="hacemos">
+  <div class="wrap">
+    <span class="eyebrow">Qué hacemos</span>
+    <h2>Tú creas. Nosotros hacemos el resto.</h2>
+    <p class="lede">La mayoría de agencias consiguen una marca y te dejan el Excel. Nosotros operamos el canal: clipping, edición, comunidad, negociación y cobro.</p>
+    <div class="grid-3">
+      <article class="card"><div class="num">01</div><h3>Clipping y reposteo</h3><p>Cortamos lives, podcasts y videos largos. Publicamos todos los días, en el formato que pide cada red.</p></article>
+      <article class="card"><div class="num">02</div><h3>Cuentas por país</h3><p>Abrimos y operamos US, MX y CO a tu nombre. Tú eres dueño de los handles y las contraseñas desde el día uno.</p></article>
+      <article class="card"><div class="num">03</div><h3>Edición y post</h3><p>Hooks, subtítulos, miniaturas. El corte listo para publicar, no un drive lleno de rusheos.</p></article>
+      <article class="card"><div class="num">04</div><h3>Comunidad y DMs</h3><p>Respondemos lo rutinario. Solo te llega lo que vale tu tiempo: marcas, collabs, prensa.</p></article>
+      <article class="card"><div class="num">05</div><h3>Marcas y negociación</h3><p>Buscamos, pitchamos, cerramos tarifa y cobramos. Tú apruebas. Nosotros empujamos el contrato.</p></article>
+      <article class="card"><div class="num">06</div><h3>Reporte mensual</h3><p>Números claros: vistas, deals, lo que se cobró, lo que viene. Sin dashboards de teatro.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="estudio">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">El estudio</span>
+      <h2>Una casa de contenido en Laureles. No un WeWork con aros de luz.</h2>
+      <p class="lede">Tres pisos: sets, estudio de podcast y terraza. Veinte sets de streaming. Un equipo que ya opera catorce cuentas desde Medellín.</p>
+    </div>
+    <div class="rules">
+      <div class="rule"><strong>Medellín, no “remoto USA”</strong>Puedes entrar a grabar. El equipo está acá.</div>
+      <div class="rule"><strong>Volumen industrial</strong>Un fin de semana de set cubre el mes de clips en tres países.</div>
+      <div class="rule"><strong>Todos los formatos</strong>Streaming, stand-up, podcast, lifestyle, food, deporte. Si hay material crudo, hay operación.</div>
+      <div class="rule"><strong>CO · MX · US</strong>El mismo talento, tres mercados, tres calendarios.</div>
+    </div>
+  </div>
+</section>
+
+<section class="wine" id="planes">
+  <div class="wrap">
+    <span class="eyebrow">Planes</span>
+    <h2>Tres formas de trabajar. Cero cuota de entrada.</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Representación</h3>
+        <div class="price">20%</div>
+        <p class="muted">Sin mensualidad. Cero costo si no hay deals.</p>
+        <ul>
+          <li>Marcas, contratos y cobros</li>
+          <li>Tú sigues operando el contenido</li>
+          <li>Para quien ya tiene ritmo y quiere pipeline</li>
+        </ul>
+        <a class="btn btn-dark" href="#aplicar">Empezar</a>
+      </div>
+      <div class="plan featured">
+        <div class="badge">El más pedido</div>
+        <h3>Expansión</h3>
+        <div class="price">15% + ops</div>
+        <p>USD 1.500–3.000 / mes de operación</p>
+        <ul>
+          <li>Clipping, cuentas por país, comunidad</li>
+          <li>Estudio y calendario</li>
+          <li>Marcas encima de la operación</li>
+        </ul>
+        <a class="btn" href="#aplicar">Quiero esto</a>
+      </div>
+      <div class="plan">
+        <h3>Socios</h3>
+        <div class="price">10%</div>
+        <p class="muted">Más participación en productos juntos.</p>
+        <ul>
+          <li>Para 3–5 talentos, no para todos</li>
+          <li>Lanzamos productos con tu marca</li>
+          <li>Se construye, no se aplica masivo</li>
+        </ul>
+        <a class="btn btn-dark" href="#aplicar">Conversemos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Nada de letra chica</span>
+    <h2>Las reglas, en una pantalla.</h2>
+    <div class="rules">
+      <div class="rule"><strong>Tú eres dueño de todo</strong>Cuentas, handles, contraseñas y contenido. Desde el día uno.</div>
+      <div class="rule"><strong>Prueba de 90 días</strong>Te sales sin penalidad. Contrato de 12 meses, salida a 60 días de cualquier lado.</div>
+      <div class="rule"><strong>Cola de 6 meses</strong>Solo sobre deals que trajo la agencia. Nada más.</div>
+      <div class="rule"><strong>Sin fee de entrada</strong>No cobramos onboarding. Las facturas de marca originales son visibles.</div>
+    </div>
+  </div>
+</section>
+
+<section class="wine" id="marcas">
+  <div class="wrap">
+    <span class="eyebrow">Marcas</span>
+    <h2>Una casa, un roster, un estudio. Campañas que se pueden grabar mañana.</h2>
+    <p class="lede">No vendemos un Excel de influencers. Armamos el talento + el set + la edición. Brief corto, respuesta rápida, contenido que sí sale.</p>
+    <div class="doors">
+      <a class="door a" href="#aplicar">
+        <span class="eyebrow" style="color:var(--gold)">Para creadores</span>
+        <h3>Auditoría de 30 minutos</h3>
+        <p>Vemos tu material. Te decimos qué plan encaja. Sin compromiso.</p>
+      </a>
+      <a class="door b" href="#aplicar">
+        <span class="eyebrow" style="color:var(--gold)">Para marcas</span>
+        <h3>Brief de campaña</h3>
+        <p>Cuéntanos marca, objetivo y timing. Armamos el roster desde Laureles.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="aplicar">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Aplicar</span>
+      <h2>Cuéntanos quién eres.</h2>
+      <p class="lede">No es un casting de reality. Si ya produces material y quieres que alguien opere el resto, este es el formulario.</p>
+      <div class="tabs">
+        <button type="button" class="tab on" data-tab="creador">Soy creador</button>
+        <button type="button" class="tab" data-tab="marca">Soy marca</button>
+      </div>
+    </div>
+    <div>
+      <p class="ok" id="ok">Listo. Te escribimos por WhatsApp o correo.</p>
+      <div class="form-panel on" id="panel-creador">
+        <form id="form-creador">
+          <div><label for="c-nombre">Nombre</label><input id="c-nombre" name="nombre" required></div>
+          <div><label for="c-wa">WhatsApp</label><input id="c-wa" name="whatsapp" required placeholder="+57"></div>
+          <div><label for="c-ig">Instagram o TikTok</label><input id="c-ig" name="handle" required placeholder="@tuusuario"></div>
+          <div><label for="c-ciudad">Ciudad</label><input id="c-ciudad" name="ciudad" required placeholder="Medellín"></div>
+          <div><label for="c-hace">Qué haces</label><textarea id="c-hace" name="que_haces" required placeholder="Streaming, comedia, lifestyle, food, podcast…"></textarea></div>
+          <button class="btn" type="submit">Pedir auditoría</button>
+          <p class="note">30 minutos. Sin compromiso. No hay que mudarse a ninguna casa.</p>
+        </form>
+      </div>
+      <div class="form-panel" id="panel-marca">
+        <form id="form-marca">
+          <div><label for="m-marca">Marca</label><input id="m-marca" name="marca" required></div>
+          <div><label for="m-contacto">Nombre y correo o WhatsApp</label><input id="m-contacto" name="contacto" required></div>
+          <div><label for="m-campana">Campaña</label><textarea id="m-campana" name="campana" required placeholder="Objetivo, timing, si hay presupuesto de referencia"></textarea></div>
+          <button class="btn" type="submit">Enviar brief</button>
+          <p class="note">Respondemos con roster y propuesta de set, no con un PDF genérico.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq wrap">
+  <span class="eyebrow">Preguntas</span>
+  <h2>Lo que siempre preguntan.</h2>
+  <details><summary>¿Necesito millones de seguidores?</summary><p>No. Buscamos material crudo constante y un hueco de operación. Mid-tier que graba mucho le gana a mega que no entrega.</p></details>
+  <details><summary>¿De quién son las cuentas?</summary><p>Tuyas. Handles y contraseñas a tu nombre desde el día uno. Nosotros operamos; no nos quedamos con el canal.</p></details>
+  <details><summary>¿Hay que pagar para entrar?</summary><p>No. Representación es 20% solo si hay deal. Expansión suma un retainer de ops. Cero fee de onboarding.</p></details>
+  <details><summary>¿Dónde está el estudio?</summary><p>Laureles, Medellín. Tres pisos, veinte sets, podcast y terraza. Puedes venir a grabar.</p></details>
+  <details><summary>¿Trabajan solo con mujeres o live shopping?</summary><p>No. Representamos creadores de todos los tipos: comedia, streaming, podcast, lifestyle, food, deporte y más.</p></details>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="serif" style="font-size:1.3rem;margin-bottom:6px">La Casa de los Creadores</div>
+      <p>Creative Commerce · Laureles, Medellín</p>
+    </div>
+    <div>
+      <p><a href="#aplicar">Aplicar</a> · <a href="#marcas">Marcas</a> · <a href="#planes">Planes</a></p>
+      <p style="opacity:.6;margin-top:8px">© 2026 Creative Commerce. Tú eres dueño de tus cuentas.</p>
+    </div>
+  </div>
+</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+    tab.classList.add('on');
+    document.querySelectorAll('.form-panel').forEach(p=>p.classList.remove('on'));
+    document.getElementById('panel-'+tab.dataset.tab).classList.add('on');
+  });
+});
+function handle(form){
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const data=Object.fromEntries(new FormData(form).entries());
+    const subject=form.id==='form-creador'?'Aplicación creador — Casa de los Creadores':'Brief de marca — Casa de los Creadores';
+    const body=Object.entries(data).map(([k,v])=>k+': '+v).join('\n');
+    window.location.href='mailto:hola@casacreadores.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    document.getElementById('ok').classList.add('on');
+    form.reset();
+  });
+}
+handle(document.getElementById('form-creador'));
+handle(document.getElementById('form-marca'));
+</script>
+</body>
+</html>
