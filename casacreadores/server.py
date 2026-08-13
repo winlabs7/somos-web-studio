@@ -24,6 +24,13 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(raw)
 
+    def do_GET(self):
+        path = self.path.split("?", 1)[0]
+        if path in {"/leads.jsonl", "/server.py", "/_setkey.py", "/Procfile", "/railway.toml", "/requirements.txt"}:
+            self.send_error(404)
+            return
+        return super().do_GET()
+
     def do_POST(self):
         length = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(length) if length else b"{}"
