@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
-import json, os, urllib.request
+import json, os, threading, urllib.request
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
+from analyze import run_and_store
 
 ROOT = Path(__file__).resolve().parent
 PORT = int(os.environ.get("PORT", "8080"))
 XAI = os.environ.get("XAI_API_KEY", "")
 LEADS = ROOT / "leads.jsonl"
+SCORES = ROOT / "scores.jsonl"
+HIDDEN = {
+    "/leads.jsonl", "/scores.jsonl", "/server.py", "/analyze.py",
+    "/_setkey.py", "/Procfile", "/railway.toml", "/requirements.txt",
+}
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
@@ -26,7 +32,7 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         path = self.path.split("?", 1)[0]
-        if path in {"/leads.jsonl", "/server.py", "/_setkey.py", "/Procfile", "/railway.toml", "/requirements.txt"}:
+        if path in HIDDEN:
             self.send_error(404)
             return
         return super().do_GET()
@@ -65,6 +71,8 @@ class Handler(SimpleHTTPRequestHandler):
             kind = payload.get("tipo") or payload.get("kind") or "?"
             name = payload.get("nombre") or payload.get("name") or "?"
             print(f"lead {kind} {name}")
+            if str(kind).lower() in {"creador", "creator"} and (payload.get("handle") or "").strip():
+                threading.Thread(target=run_and_store, args=(payload, SCORES), daemon=True).start()
             return self._json(200, {"ok": True})
         self.send_error(404)
 
@@ -72,5 +80,6 @@ class Handler(SimpleHTTPRequestHandler):
         print(fmt % args)
 
 if __name__ == "__main__":
-    print(f"casacreadores listening on {PORT} key={'yes' if XAI else 'NO'}")
+    scrape = bool(os.environ.get("SCRAPECREATORS_API_KEY") or os.environ.get("SCRAPE_CREATORS_API_KEY"))
+    print(f"casacreadores listening on {PORT} xai={'yes' if XAI else 'NO'} scrape={'yes' if scrape else 'NO'}")
     ThreadingHTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
