@@ -86,6 +86,7 @@
     if (modalClose) modalClose.addEventListener("click", closeModal);
     overlay.addEventListener("click", function (e) {
       if (e.target === overlay) closeModal();
+      if (e.target.closest('a[href="#aplicar"]')) closeModal();
     });
   }
 
