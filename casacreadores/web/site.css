@@ -103,7 +103,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .path-right p{color:#E4DDD6}
 .path-ghost{position:absolute;right:24px;bottom:10px;font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,12vw,160px);line-height:1;opacity:.07;letter-spacing:.04em;pointer-events:none}
 
-#quien,#por-que{background:var(--bg);padding:120px 0 80px}
+#quien,#por-que,#sillas{background:var(--bg);padding:120px 0 80px}
 .who-head{max-width:720px;margin-bottom:56px}
 .who-row{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:28px 0 56px;border-top:1px solid var(--border);transition:opacity .35s}
 .who-row[data-modal],.who-row[role="button"]{cursor:pointer}
@@ -189,6 +189,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 
 #flujo{background:var(--bg);padding:120px 0;border-top:1px solid var(--border)}
 .flujo{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px}
+.flujo.cols-3{grid-template-columns:repeat(3,1fr)}
 .flujo-step{padding:8px 36px 8px 0;border-left:1px solid var(--border);padding-left:28px}
 .flujo-step:first-child{border-left:0;padding-left:0}
 .flujo-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,8vw,120px);line-height:.8;letter-spacing:.02em;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:18px;display:block}
