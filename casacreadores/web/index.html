@@ -3,354 +3,307 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Casa de los Creadores · Agencia de talento</title>
-<meta name="description" content="Agencia de talento en Laureles, Medellín. Convertimos la audiencia que ya tienes —después del reality, del programa, del momento— en una carrera que sigue creciendo. Estudio, equipo y campañas, todo bajo un mismo techo.">
+<title>La Casa de los Creadores · Estamos tomando talento</title>
+<meta name="description" content="Agencia de talento en Laureles, Medellín. Si ya tienes audiencia, la monetizamos ahora. Si estás creciendo, empiezas en TikTok Live y pasas a marcas. Podcasts, campañas, productos digitales.">
 <meta property="og:title" content="La Casa de los Creadores">
-<meta property="og:description" content="El show se acaba. La audiencia se queda. Nosotros hacemos que siga creciendo.">
+<meta property="og:description" content="Dos caminos. El que ya tiene público, cobra. El que está subiendo, empieza en live.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://casacreadores.co">
+<meta property="og:url" content="https://comerciocreativo.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --cream:#FBF7F1;
-  --cream-2:#F6EFE6;
-  --wine:#2A1520;
-  --wine-2:#241019;
-  --wine-3:#4A1E33;
-  --wine-4:#7A2540;
-  --pink:#DA4E78;
-  --pink-2:#C84E74;
-  --gold:#C49A4A;
-  --olive:#7E8A45;
-  --olive-2:#9AAB57;
-  --muted:#8b7480;
-  --white:#fff;
-  --radius:18px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Archivo,system-ui,sans-serif;background:var(--cream);color:var(--wine);line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit}
-h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.02em}
-.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
-.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700;color:var(--pink-2);margin-bottom:12px}
-.muted{color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--pink);color:var(--white);padding:13px 26px;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(218,78,120,.28);background:var(--pink-2)}
-.btn-ghost{background:transparent;color:var(--cream);border:1.5px solid rgba(251,247,241,.45)}
-.btn-ghost:hover{background:rgba(251,247,241,.08);box-shadow:none}
-.btn-dark{background:var(--wine);color:var(--cream)}
-.btn-dark:hover{background:var(--wine-3);box-shadow:0 10px 24px rgba(42,21,32,.25)}
-
-nav{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(42,21,32,.06)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
-.logo{font-family:Fraunces,serif;font-size:1.15rem;font-weight:600;text-decoration:none;color:var(--wine)}
-.logo span{display:block;font-family:Archivo,sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
-.nav-links{display:flex;gap:22px;align-items:center;font-size:.88rem;font-weight:500}
-.nav-links a{text-decoration:none;opacity:.8}
-.nav-links a:hover{opacity:1}
-.menu-btn{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--wine)}
-
-.hero{padding:72px 0 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.4rem,5.4vw,4.3rem);margin-bottom:18px}
-.hero h1 em{font-style:italic;color:var(--wine-4)}
-.hero p.lead{font-size:1.12rem;max-width:36em;color:var(--wine-3);margin-bottom:28px}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.stat{background:var(--white);border:1px solid rgba(42,21,32,.08);border-radius:14px;padding:16px 14px}
-.stat b{display:block;font-family:Fraunces,serif;font-size:1.45rem;color:var(--wine)}
-.stat span{font-size:.75rem;color:var(--muted);font-weight:600;letter-spacing:.02em}
-.hero-card{background:linear-gradient(160deg,var(--wine) 0%,var(--wine-3) 55%,#7A2540 100%);color:var(--cream);border-radius:28px;padding:36px 32px;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
-.hero-card::before{content:"";position:absolute;inset:-40% -20% auto auto;width:280px;height:280px;background:radial-gradient(circle,rgba(196,154,74,.45),transparent 70%);pointer-events:none}
-.hero-card .tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
-.hero-card h3{font-size:1.85rem;margin-bottom:10px}
-.hero-card p{opacity:.88;font-weight:400}
-
-section{padding:88px 0}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.wine{background:var(--wine);color:var(--cream)}
-.wine .eyebrow{color:var(--gold)}
-.wine h2{color:var(--cream)}
-h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:16px}
-.lede{font-size:1.05rem;max-width:38em}
-
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
-.card{background:var(--white);border:1px solid rgba(42,21,32,.08);border-radius:var(--radius);padding:24px}
-.wine .card{background:rgba(251,247,241,.06);border-color:rgba(251,247,241,.12);color:var(--cream)}
-.card h3{font-size:1.25rem;margin:8px 0 8px}
-.card p{font-size:.95rem;opacity:.88}
-.num{font-family:Fraunces,serif;color:var(--pink);font-size:1.1rem;font-weight:600}
-
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;align-items:stretch}
-.plan{background:var(--white);border:1px solid rgba(42,21,32,.1);border-radius:22px;padding:28px 24px;display:flex;flex-direction:column;color:var(--wine)}
-.plan h3,.plan .price,.plan li,.plan p{color:inherit}
-.plan .muted{color:var(--wine-3)}
-.plan.featured{background:var(--cream);color:var(--wine);border:2px solid var(--gold);transform:scale(1.03)}
-.plan.featured .muted{color:var(--wine-3)}
-.plan.featured h3,.plan.featured .price{color:var(--wine)}
-.plan .price{font-family:Fraunces,serif;font-size:1.7rem;margin:8px 0 6px}
-.plan ul{list-style:none;margin:16px 0 22px;flex:1}
-.plan li{padding:7px 0 7px 18px;position:relative;font-size:.92rem}
-.plan li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--pink)}
-.plan.featured li::before{background:var(--gold)}
-.badge{display:inline-block;background:var(--gold);color:var(--wine-2);font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px}
-
-.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
-.rule{background:var(--cream-2);border-radius:14px;padding:18px 18px}
-.rule strong{display:block;margin-bottom:4px}
-
-.doors{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px}
-.door{border-radius:22px;padding:32px;min-height:220px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none}
-.door.a{background:linear-gradient(180deg,#4A1E33,#2A1520);color:var(--cream)}
-.door.b{background:linear-gradient(180deg,#7E8A45,#4A1E33);color:var(--cream)}
-.door h3{font-size:1.8rem;margin-bottom:8px}
-
-form{display:grid;gap:12px}
-label{font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
-input,select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(42,21,32,.14);background:#fff;font:inherit;color:var(--wine)}
-textarea{min-height:110px;resize:vertical}
-.tabs{display:flex;gap:8px;margin:22px 0}
-.tab{border:1px solid rgba(42,21,32,.14);background:#fff;border-radius:999px;padding:8px 16px;font-weight:700;cursor:pointer}
-.tab.on{background:var(--wine);color:var(--cream);border-color:var(--wine)}
-.form-panel{display:none}
-.form-panel.on{display:block}
-.note{font-size:.82rem;color:var(--muted);margin-top:8px}
-
-.faq details{border-bottom:1px solid rgba(42,21,32,.1);padding:16px 0}
-.faq summary{cursor:pointer;font-weight:700;list-style:none}
-.faq summary::-webkit-details-marker{display:none}
-.faq details p{margin-top:8px;color:var(--wine-3)}
-
-footer{background:var(--wine-2);color:var(--cream);padding:48px 0 28px;font-size:.9rem}
-.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.foot a{color:var(--cream);opacity:.75;text-decoration:none}
-.ok{background:#e8f6ee;color:#14532d;padding:12px 14px;border-radius:12px;display:none}
-.ok.on{display:block}
-
-
-.voice-panel{display:none;background:var(--white);border:1px solid rgba(42,21,32,.12);border-radius:22px;padding:22px}
-.voice-panel.on{display:block}
-.v-status{font-weight:700;margin-bottom:10px}
-.v-log{max-height:240px;overflow:auto;background:var(--cream-2);border-radius:14px;padding:12px 14px;margin:12px 0}
-.v-line{font-size:.9rem;margin:6px 0}
-.v-line.ai{color:var(--wine)}
-.v-line.you{color:var(--wine-3)}
-.v-actions{display:flex;flex-wrap:wrap;gap:10px}
-
-@media (max-width:860px){
-  .hero,.split,.grid-3,.plans,.rules,.doors{grid-template-columns:1fr}
-  .plan.featured{transform:none}
-  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px 22px 22px;border-bottom:1px solid rgba(42,21,32,.08);align-items:flex-start}
-  .nav-links.open{display:flex}
-  .menu-btn{display:block}
-  .hero{padding-top:36px}
-  .hero-card{min-height:280px}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 <nav>
-  <div class="wrap nav-inner">
-    <a class="logo" href="#inicio">La Casa de los Creadores<span>Creative Commerce · Medellín</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Menú">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#hacemos">Qué hacemos</a>
-      <a href="#planes">Planes</a>
-      <a href="#estudio">El estudio</a>
-      <a href="#marcas">Marcas</a>
-      <a class="btn" href="#aplicar" style="padding:9px 18px;font-size:.82rem">Hablar</a>
-    </div>
+  <a class="nav-logo" href="#inicio">LA CASA<span>.</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="#tracks">Caminos</a>
+    <a class="nav-link" href="#quien">Para quién</a>
+    <a class="nav-link" href="#oficio">Oficio</a>
+    <a class="nav-link" href="#estudio">Estudio</a>
+    <a class="nav-link" href="#planes">Planes</a>
+    <a class="nav-cta" href="#aplicar">Hablar</a>
   </div>
+  <button class="nav-hamburger" id="navHamburger" type="button" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#tracks">Caminos</a>
+  <a href="#quien">Para quién</a>
+  <a href="#oficio">Oficio</a>
+  <a href="#estudio">Estudio</a>
+  <a href="#planes">Planes</a>
+  <a href="#aplicar">Hablar</a>
+</div>
 
 <header class="wrap hero" id="inicio">
   <div>
-    <span class="eyebrow">Agencia de talento · Laureles</span>
-    <h1>El show se acaba. <em>La carrera no.</em></h1>
-    <p class="lead">Representamos creadores colombianos que ya tienen audiencia. Cuando el reality o el programa termina, el público se queda. Nosotros ponemos el equipo, las campañas y el estudio para que ese momento se vuelva un negocio que sigue creciendo.</p>
-    <div class="hero-cta">
-      <a class="btn" href="#aplicar">Soy creador</a>
-      <a class="btn btn-dark" href="#marcas">Soy marca</a>
-    </div>
-    <div class="stats">
-      <div class="stat"><b>20+</b><span>escritorios de equipo</span></div>
-      <div class="stat"><b>10</b><span>sets temáticos</span></div>
-      <div class="stat"><b>10</b><span>sets de streaming</span></div>
+    <p class="eyebrow hero-label reveal">Estamos tomando talento · Laureles</p>
+    <h1 class="reveal reveal-delay-1">Ya hiciste<br>la audiencia.<br>Ahora cobra.</h1>
+    <p class="sub reveal reveal-delay-2">Todos empiezan igual: comunidad. Lo más rápido es el live — hablarle a gente de verdad, todos los días. Cuando ya hay chat, se vende. Marcas. O tus cursos. El podcast no es el premio al final: es cómo te vuelves el experto que puede cobrar por enseñar.</p>
+    <div class="hero-cta reveal reveal-delay-3">
+      <a class="btn btn-coral" href="#aplicar">Quiero entrar</a>
+      <a class="btn btn-ghost" href="#tracks">Cómo se cobra</a>
     </div>
   </div>
-  <aside class="hero-card">
-    <div class="tag">La diferencia</div>
-    <h3>Una máquina de contenido. Bajo un mismo techo.</h3>
-    <p>Editores, community y campañas en el primer piso. Diez sets para grabar. Diez de streaming. Un podcast. Tú llegas con la audiencia. Nosotros hacemos que no se apague.</p>
-  </aside>
+  <figure class="hero-visual reveal reveal-delay-2">
+    <img src="img/studio-lounge-pink.jpg" alt="Sala rosa del estudio en Laureles">
+    <figcaption>Laureles · Medellín</figcaption>
+  </figure>
 </header>
 
-<section class="wine" id="hacemos">
+<div class="stats" id="statsBar">
+  <div class="stat"><b class="stat-number" data-count="14">0</b><span>Cuentas que ya operamos</span></div>
+  <div class="stat"><b class="stat-number" data-count="3">0</b><span>Países cuando toca expandir</span></div>
+  <div class="stat"><b>1</b><span>Techo. El resto es equipo</span></div>
+</div>
+
+<section class="section" id="tracks">
   <div class="wrap">
-    <span class="eyebrow">Qué hacemos</span>
-    <h2>La audiencia ya está. Falta el equipo.</h2>
-    <p class="lede">Un reality o un programa te explota el reach. Después, la mayoría no sabe cómo seguir ni cómo cobrarlo. Nosotros operamos el canal: contenido todos los días, campañas pagadas, y México y Estados Unidos cuando estés listo.</p>
-    <div class="grid-3">
-      <article class="card"><div class="num">01</div><h3>Seguir el momentum</h3><p>El show termina. El feed no. Un equipo de edición y community publica todos los días para que esa audiencia no se enfríe.</p></article>
-      <article class="card"><div class="num">02</div><h3>Campañas que pagan</h3><p>Marcas, tarifas, contratos y cobro. Convertimos los seguidores que ya tienes en trabajo pagado, no en likes que se quedan en el aire.</p></article>
-      <article class="card"><div class="num">03</div><h3>México y Estados Unidos</h3><p>Cuando estés listo, abrimos cuentas en MX y US a tu nombre. Mismo talento, tres mercados, operados desde Medellín.</p></article>
-      <article class="card"><div class="num">04</div><h3>Edición y clipping</h3><p>Hooks, subtítulos, cortes de lives y podcasts. El material sale del set y llega publicado, no a un drive olvidado.</p></article>
-      <article class="card"><div class="num">05</div><h3>Comunidad y DMs</h3><p>Community managers en el primer piso. Lo rutinario se responde. A ti te llega lo que vale: marcas, collabs, prensa.</p></article>
-      <article class="card"><div class="num">06</div><h3>Todo bajo un techo</h3><p>No coordinas freelancers. Grabas acá. El equipo está en el piso de abajo. Un reporte al mes, números claros.</p></article>
+    <p class="eyebrow reveal">El orden</p>
+    <h2 class="reveal">Primero te quieren.<br>Después les vendes.</h2>
+    <p class="lede reveal reveal-delay-1">Da igual si llegas con cien mil o con mil. El trabajo es el mismo: comunidad. El live es el atajo. Lo que les vendes —una marca o lo tuyo— se decide cuando ya hay gente que vuelve.</p>
+    <div class="tracks">
+      <article class="track now reveal">
+        <p class="tag">1 · Comunidad</p>
+        <h3>Empieza en vivo</h3>
+        <p>TikTok Live, Twitch, Kick. Hablar, quedarse, que el chat tenga nombre. Si ya tienes following y nunca hiciste live, igual: aquí se construye la relación. Sin eso, no hay a quién venderle.</p>
+      </article>
+      <article class="track rise reveal reveal-delay-2">
+        <p class="tag">2 · Cobrar</p>
+        <h3>Marcas o lo tuyo</h3>
+        <p>Con comunidad, hay dos negocios. Les llevas una marca. O les vendes tu curso, tu webinar, tu taller. El podcast entra aquí si quieres ser el experto: no porque “ya te ganaste el set”. Entrevistas a los que saben y el público te pone a ti.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="estudio">
-  <div class="wrap split">
-    <div>
-      <span class="eyebrow">El estudio</span>
-      <h2>Una máquina de contenido en Laureles. Todo bajo un mismo techo.</h2>
-      <p class="lede">Primer piso: más de 20 escritorios para editores, community managers y el equipo que hace crecer las cuentas. Arriba: 10 sets temáticos, 10 de live streaming y una sala de podcast. Calidad de producción, con la gente para que escale.</p>
+<section class="section" id="quien" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow reveal">Para quién</p>
+    <h2 class="reveal">No es un solo tipo<br>de creador.</h2>
+    <p class="lede reveal">Toca una tarjeta. No es un formulario. Es para ver si esto es lo tuyo.</p>
+    <div class="who-grid">
+      <button class="who reveal" data-modal="m1" type="button"><small>01</small><h3>Following, sin negocio</h3><p>Hiciste el trabajo difícil. Nadie te está cobrando eso.</p></button>
+      <button class="who reveal" data-modal="m2" type="button"><small>02</small><h3>Streamers</h3><p>TikTok Live, Twitch, Kick, YouTube. El live es el show. Nosotros el resto.</p></button>
+      <button class="who reveal" data-modal="m3" type="button"><small>03</small><h3>Vas empezando</h3><p>Igual: live, comunidad, y después se ve qué se les vende.</p></button>
+      <button class="who reveal" data-modal="m4" type="button"><small>04</small><h3>Saliste de un show</h3><p>El rating se acaba. La cuenta no tiene por qué.</p></button>
+      <button class="who reveal" data-modal="m5" type="button"><small>05</small><h3>Cursos y webinars</h3><p>Tu nombre ya vende. Falta el producto y quien lo arme contigo.</p></button>
+      <button class="who reveal" data-modal="m6" type="button"><small>06</small><h3>El reportero</h3><p>Entrevistas expertos. El público te cree a ti. Ahí se venden cursos.</p></button>
     </div>
-    <div class="rules">
-      <div class="rule"><strong>20+ escritorios</strong>Edición, community, campañas. El equipo de soporte vive en el primer piso, no en un WhatsApp.</div>
-      <div class="rule"><strong>10 sets temáticos</strong>Salas diseñadas para grabar. Distintos looks, lista para el próximo video.</div>
-      <div class="rule"><strong>10 streaming + podcast</strong>Lives y audio con set de verdad. El recorte sale el mismo día.</div>
-      <div class="rule"><strong>CO · MX · US</strong>Operamos Colombia hoy. México y Estados Unidos cuando el momento pida expandir.</div>
+    <div class="marquee-wrap">
+      <div class="marquee" id="crMarquee">
+        <img src="img/studio-vanity-led.jpg" alt=""><img src="img/studio-creator-1.jpg" alt=""><img src="img/studio-podcast-1.jpg" alt=""><img src="img/studio-desk-pink-1.jpg" alt=""><img src="img/studio-product-shoot.jpg" alt=""><img src="img/studio-lounge-warm.jpg" alt="">
+        <img src="img/studio-vanity-led.jpg" alt=""><img src="img/studio-creator-1.jpg" alt=""><img src="img/studio-podcast-1.jpg" alt=""><img src="img/studio-desk-pink-1.jpg" alt=""><img src="img/studio-product-shoot.jpg" alt=""><img src="img/studio-lounge-warm.jpg" alt="">
+      </div>
     </div>
   </div>
 </section>
 
-<section class="wine" id="planes">
+<section class="section" id="oficio">
   <div class="wrap">
-    <span class="eyebrow">Planes</span>
-    <h2>Tres formas de trabajar. Cero cuota de entrada.</h2>
+    <p class="eyebrow reveal">El oficio</p>
+    <h2 class="reveal">Tú sales.<br>Nosotros operamos.</h2>
+    <p class="lede reveal">Una sola vez: edición, comunidad, marcas, lives, productos, cuentas en otros países. No es un menú para recitar. Es el equipo que te faltaba.</p>
+    <div class="ops">
+      <button class="op reveal" data-modal="o1" type="button"><h3>Contenido</h3><p>Cortamos, publicamos, contestamos. Tú no vives en CapCut.</p></button>
+      <button class="op reveal" data-modal="o2" type="button"><h3>Marcas</h3><p>Campañas de verdad. Brief, set, cobro.</p></button>
+      <button class="op reveal" data-modal="o3" type="button"><h3>Lives</h3><p>Host, clips, chat, repetición. El stream no se muere a la hora.</p></button>
+      <button class="op reveal" data-modal="o4" type="button"><h3>Productos</h3><p>Cursos y webinars armados contigo. No una plantilla.</p></button>
+      <button class="op reveal" data-modal="o5" type="button"><h3>Otros países</h3><p>México y Estados Unidos cuando el público de aquí ya da.</p></button>
+      <button class="op reveal" data-modal="o6" type="button"><h3>Lo que no es público</h3><p>Comunidades de pago, membresías, lo que no vive solo de likes.</p></button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="estudio" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow reveal">El estudio</p>
+    <h2 class="reveal">Laureles.<br>Se ve así.</h2>
+    <p class="lede reveal">Una casa para grabar, hacer live y sentar al equipo. Tócala.</p>
+    <div class="studio-grid" id="studioGrid">
+      <button type="button" data-i="0"><img src="img/studio-lounge-amber.jpg" alt="Sala ámbar"></button>
+      <button type="button" data-i="1"><img src="img/studio-creator-2.jpg" alt="Set de creador"></button>
+      <button type="button" data-i="2"><img src="img/studio-podcast-1.jpg" alt="Podcast"></button>
+      <button type="button" data-i="3"><img src="img/studio-vanity-led.jpg" alt="Camerino LED"></button>
+      <button type="button" data-i="4"><img src="img/studio-product-shelf.jpg" alt="Producto"></button>
+    </div>
+    <p class="studio-note">Primer piso para el equipo. Arriba, sets, lives y el cuarto de podcast. No hay que mudarse a vivir aquí.</p>
+  </div>
+</section>
+
+<section class="section" id="planes">
+  <div class="wrap">
+    <p class="eyebrow reveal">Trato</p>
+    <h2 class="reveal">Tres formas<br>de trabajar.</h2>
     <div class="plans">
-      <div class="plan">
-        <h3>Representación</h3>
-        <div class="price">20%</div>
-        <p class="muted">Sin mensualidad. Cero costo si no hay deals.</p>
-        <ul>
-          <li>Marcas, contratos y cobros</li>
-          <li>Tú sigues operando el contenido</li>
-          <li>Para quien ya tiene ritmo y quiere pipeline</li>
-        </ul>
-        <a class="btn btn-dark" href="#aplicar">Hablar</a>
-      </div>
-      <div class="plan featured">
-        <div class="badge">El más pedido</div>
-        <h3>Expansión</h3>
-        <div class="price">15% + ops</div>
-        <p>USD 1.500–3.000 / mes de operación</p>
-        <ul>
-          <li>Clipping, cuentas por país, comunidad</li>
-          <li>Estudio y calendario</li>
-          <li>Marcas encima de la operación</li>
-        </ul>
-        <a class="btn" href="#aplicar">Hablar</a>
-      </div>
-      <div class="plan">
-        <h3>Socios</h3>
-        <div class="price">10%</div>
-        <p class="muted">Más participación en productos juntos.</p>
-        <ul>
-          <li>Para 3–5 talentos, no para todos</li>
-          <li>Lanzamos productos con tu marca</li>
-          <li>Se construye, no se aplica masivo</li>
-        </ul>
-        <a class="btn btn-dark" href="#aplicar">Hablar</a>
-      </div>
+      <article class="plan reveal"><p class="eyebrow">Comisión</p><div class="pct">20%</div><p>Traemos el trabajo. Nos llevamos una quinta parte. Sirve cuando ya hay deals.</p></article>
+      <article class="plan featured reveal reveal-delay-1"><p class="eyebrow">Equipo + %</p><div class="pct">15%</div><p>Más un mensual. Edición, comunidad, calendarios. El que más usamos.</p></article>
+      <article class="plan reveal reveal-delay-2"><p class="eyebrow">Sociedad</p><div class="pct">10%</div><p>Más equity. Para cuando esto es un negocio juntos, no un mes.</p></article>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <span class="eyebrow">Nada de letra chica</span>
-    <h2>Las reglas, en una pantalla.</h2>
-    <div class="rules">
-      <div class="rule"><strong>Tú eres dueño de todo</strong>Cuentas, handles, contraseñas y contenido. Desde el día uno.</div>
-      <div class="rule"><strong>Prueba de 90 días</strong>Te sales sin penalidad. Contrato de 12 meses, salida a 60 días de cualquier lado.</div>
-      <div class="rule"><strong>Cola de 6 meses</strong>Solo sobre deals que trajo la agencia. Nada más.</div>
-      <div class="rule"><strong>Sin fee de entrada</strong>No cobramos onboarding. Las facturas de marca originales son visibles.</div>
-    </div>
-  </div>
-</section>
-
-<section class="wine" id="marcas">
-  <div class="wrap">
-    <span class="eyebrow">Marcas</span>
-    <h2>Una casa, un roster, un estudio. Campañas que se pueden grabar mañana.</h2>
-    <p class="lede">No vendemos un Excel de influencers. Armamos el talento + el set + la edición. Brief corto, respuesta rápida, contenido que sí sale.</p>
-    <div class="doors">
-      <a class="door a" href="#aplicar">
-        <span class="eyebrow" style="color:var(--gold)">Para creadores</span>
-        <h3>Entrevista de voz</h3>
-        <p>Cuatro minutos. Handle, nicho, qué necesitas. Sin formulario.</p>
-      </a>
-      <a class="door b" href="#aplicar">
-        <span class="eyebrow" style="color:var(--gold)">Para marcas</span>
-        <h3>Brief por voz</h3>
-        <p>Marca, campaña y timing. La misma línea, otro camino.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="aplicar">
-  <div class="wrap split">
+<section class="section" id="aplicar" style="background:var(--bg2)">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
     <div>
-      <span class="eyebrow">Hablar con la casa</span>
-      <h2>Una entrevista de voz. Cuatro minutos.</h2>
-      <p class="lede">Sin formulario. Un agente de La Casa te pregunta handle, nicho y qué necesitas — o el brief si eres marca. El equipo humano sigue después por WhatsApp.</p>
+      <p class="eyebrow reveal">La entrevista</p>
+      <h2 class="reveal">Cuatro minutos.<br>Sin formulario.</h2>
+      <p class="lede reveal">Un agente de la casa te pregunta handle, en qué vas y qué camino es el tuyo. El equipo humano sigue por WhatsApp.</p>
       <div class="hero-cta" style="margin-top:22px">
-        <button class="btn" type="button" id="btn-creador">Hablar como creador</button>
-        <button class="btn btn-dark" type="button" id="btn-marca">Hablar como marca</button>
+        <button class="btn btn-coral" type="button" id="btn-creador">Hablar como creador</button>
+        <button class="btn" type="button" id="btn-marca">Hablar como marca</button>
       </div>
     </div>
     <div>
       <div class="voice-panel" id="voice-panel">
         <p class="v-status" id="voice-status">Listo cuando toques hablar.</p>
         <div class="v-log" id="voice-log"></div>
-        <div class="v-actions">
-          <button class="btn btn-dark" type="button" id="btn-hang">Colgar</button>
-        </div>
-        <p class="note">Usa audífonos si puedes. Pedimos el micrófono solo para esta llamada.</p>
+        <div class="v-actions"><button class="btn" type="button" id="btn-hang">Colgar</button></div>
+        <p class="studio-note">Pedimos el micrófono solo para esta llamada.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="faq wrap">
-  <span class="eyebrow">Preguntas</span>
-  <h2>Lo que siempre preguntan.</h2>
-  <details><summary>¿Para quién es esto?</summary><p>Creadores colombianos que ya tienen audiencia. Ideal si un reality, un programa o un momento te explotó el reach y ahora no hay equipo detrás. No es para empezar de cero.</p></details>
-  <details><summary>¿De quién son las cuentas?</summary><p>Tuyas. Handles y contraseñas a tu nombre desde el día uno. Nosotros operamos; no nos quedamos con el canal.</p></details>
-  <details><summary>¿Hay que pagar para entrar?</summary><p>No. Representación es 20% solo si hay deal. Expansión suma un retainer de ops. Cero fee de onboarding.</p></details>
-  <details><summary>¿Dónde está el estudio?</summary><p>Laureles, Medellín. Más de 20 escritorios de equipo, 10 sets temáticos, 10 de streaming y una sala de podcast. Puedes venir a grabar.</p></details>
-  <details><summary>¿Tengo que mudarme a la casa?</summary><p>No. El estudio está para producir. El equipo opera las cuentas desde acá. Tú grabas, nosotros hacemos crecer lo que ya construiste.</p></details>
+<section class="section">
+  <div class="wrap faq">
+    <p class="eyebrow">Corto</p>
+    <h2>Preguntas</h2>
+    <details><summary>¿Tengo que tener un reality atrás?</summary><p>No. Eso es un camino. El otro es following que no se cobra, o live que todavía está creciendo.</p></details>
+    <details><summary>¿Y si apenas voy empezando?</summary><p>Entras por TikTok Live. Comunidad primero. Marcas después. No te vendemos una campaña el día uno.</p></details>
+    <details><summary>¿Hacen el curso por mí?</summary><p>No. Lo armamos contigo. Tú eres la cara. Nosotros la fábrica.</p></details>
+    <details><summary>¿Hay que vivir en la casa?</summary><p>No. Vienes a grabar. El equipo se queda.</p></details>
+  </div>
 </section>
 
-<footer>
-  <div class="wrap foot">
-    <div>
-      <div class="serif" style="font-size:1.3rem;margin-bottom:6px">La Casa de los Creadores</div>
-      <p>Creative Commerce · Laureles, Medellín</p>
-    </div>
-    <div>
-      <p><a href="#aplicar">Hablar</a> · <a href="#marcas">Marcas</a> · <a href="#planes">Planes</a></p>
-      <p style="opacity:.6;margin-top:8px">© 2026 Creative Commerce. Tú eres dueño de tus cuentas.</p>
-    </div>
-  </div>
+<footer class="wrap">
+  <div>La Casa de los Creadores · Comercio Creativo · Laureles</div>
+  <div>comerciocreativo.com · casacreadores.co</div>
 </footer>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="x" type="button" id="modalX">×</button>
+    <p class="eyebrow" id="modalTag"></p>
+    <h3 id="modalTitle"></h3>
+    <p id="modalBody"></p>
+  </div>
+</div>
+<div class="lightbox" id="lightbox">
+  <button class="x" type="button" id="lbX">×</button>
+  <button class="lb-nav lb-prev" type="button" id="lbPrev">‹</button>
+  <img id="lbImage" alt="">
+  <button class="lb-nav lb-next" type="button" id="lbNext">›</button>
+</div>
 <script src="voice.js"></script>
 <script>
-const menuBtn=document.getElementById('menuBtn');
-const navLinks=document.getElementById('navLinks');
-menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
-document.getElementById('btn-creador').addEventListener('click',()=>CasaVoice.start('creador'));
-document.getElementById('btn-marca').addEventListener('click',()=>CasaVoice.start('marca'));
-document.getElementById('btn-hang').addEventListener('click',()=>{CasaVoice.stop();document.getElementById('voice-status').textContent='Llamada cerrada.';});
+(function(){
+  var burger=document.getElementById('navHamburger');
+  var mobile=document.getElementById('navMobile');
+  if(burger&&mobile){
+    burger.addEventListener('click',function(){
+      var open=burger.classList.toggle('is-open');
+      mobile.classList.toggle('is-open',open);
+      document.body.style.overflow=open?'hidden':'';
+    });
+    mobile.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        burger.classList.remove('is-open');
+        mobile.classList.remove('is-open');
+        document.body.style.overflow='';
+      });
+    });
+  }
+
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(el){
+      if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}
+    });
+  },{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  window.addEventListener('load',function(){
+    document.querySelectorAll('.reveal').forEach(function(el){
+      if(el.getBoundingClientRect().top<window.innerHeight) el.classList.add('visible');
+    });
+  });
+
+  var bar=document.getElementById('statsBar');
+  if(bar){
+    var done=false;
+    var so=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting||done) return;
+        done=true;
+        bar.querySelectorAll('.stat-number[data-count]').forEach(function(el,i){
+          var target=+el.dataset.count, start=null;
+          function tick(now){
+            if(!start) start=now;
+            var p=Math.min((now-start)/1400,1);
+            el.textContent=Math.round((1-Math.pow(1-p,3))*target);
+            if(p<1) requestAnimationFrame(tick);
+          }
+          setTimeout(function(){requestAnimationFrame(tick);},i*120);
+        });
+        so.disconnect();
+      });
+    },{threshold:0.3});
+    so.observe(bar);
+  }
+
+  var mq=document.getElementById('crMarquee');
+  if(mq){
+    mq.classList.add('is-scrolling');
+    mq.addEventListener('mouseenter',function(){mq.classList.add('is-paused');});
+    mq.addEventListener('mouseleave',function(){mq.classList.remove('is-paused');});
+  }
+
+  var copy={
+    m1:['Following, sin negocio','Hiciste crecer la cuenta. Eso ya es raro. Lo que falta es alguien que corte, publique, negocie y cobre. No empezamos de cero. Empezamos de tu público.'],
+    m2:['Streamers','El live es donde se hace la comunidad. TikTok, Twitch, Kick, YouTube. Nosotros nos quedamos con los clips, el chat y las marcas cuando el cuarto ya está lleno.'],
+    m3:['Vas empezando','Da igual. El primer trabajo es que vuelvan mañana. Live. Nombres en el chat. Después se decide si les vendes una marca o algo tuyo.'],
+    m4:['Saliste de un show','Un camino, no el único. Si el programa te llenó la cuenta, hay que operar antes de que se enfríe. Comunidad primero. Venta después.'],
+    m5:['Cursos y webinars','Cuando ya hay gente que te cree, se les puede vender lo tuyo. Lo armamos contigo. Tú la cara. Nosotros la fábrica. No es un PDF genérico.'],
+    m6:['El reportero','No tienes que ser el que más sabe el día uno. Entrevistas a los que sí saben. El público te pone en el medio. Ahí se sostiene un curso, un taller, un webinar. El podcast es esa herramienta. No es un premio por haber hecho campañas.'],
+    o1:['Contenido','Edición, clips, calendario, comunidad. Tú grabas o haces live. El resto no te puede quitar el día.'],
+    o2:['Marcas','Una forma de cobrarle a la comunidad: llevarles algo de afuera. Brief, set, contrato, plata.'],
+    o3:['Lives','Donde se construye el cuarto. Host, cortes, repetición. Sin live, la venta es un grito al vacío.'],
+    o4:['Productos','La otra forma de cobrar: lo tuyo. Curso, webinar, taller. Se diseña cuando ya hay a quién vendérselo.'],
+    o5:['Otros países','México y Estados Unidos cuando Colombia ya da. Cuentas nuevas, mismo equipo.'],
+    o6:['Lo que no es público','Membresías, comunidades de pago, lo que no cabe en el like. Si ya te pagan en privado, se puede operar como negocio.']
+  };
+  var modal=document.getElementById('modal');
+  document.querySelectorAll('[data-modal]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var c=copy[btn.dataset.modal]; if(!c) return;
+      document.getElementById('modalTag').textContent=btn.querySelector('small')?btn.querySelector('small').textContent:'';
+      document.getElementById('modalTitle').textContent=c[0];
+      document.getElementById('modalBody').textContent=c[1];
+      modal.classList.add('on');
+    });
+  });
+  function closeM(){modal.classList.remove('on');}
+  document.getElementById('modalX').addEventListener('click',closeM);
+  modal.addEventListener('click',function(e){if(e.target===modal) closeM();});
+
+  var shots=['img/studio-lounge-amber.jpg','img/studio-creator-2.jpg','img/studio-podcast-1.jpg','img/studio-vanity-led.jpg','img/studio-product-shelf.jpg','img/studio-creator-1.jpg','img/studio-lounge-pink.jpg'];
+  var li=0, box=document.getElementById('lightbox'), img=document.getElementById('lbImage');
+  function show(i){li=(i+shots.length)%shots.length;img.src=shots[li];box.classList.add('on');}
+  document.querySelectorAll('#studioGrid button').forEach(function(b){
+    b.addEventListener('click',function(){show(+b.dataset.i);});
+  });
+  document.getElementById('lbPrev').addEventListener('click',function(){show(li-1);});
+  document.getElementById('lbNext').addEventListener('click',function(){show(li+1);});
+  document.getElementById('lbX').addEventListener('click',function(){box.classList.remove('on');});
+  box.addEventListener('click',function(e){if(e.target===box) box.classList.remove('on');});
+
+  document.getElementById('btn-creador').addEventListener('click',function(){CasaVoice.start('creador');});
+  document.getElementById('btn-marca').addEventListener('click',function(){CasaVoice.start('marca');});
+  document.getElementById('btn-hang').addEventListener('click',function(){
+    CasaVoice.stop();
+    document.getElementById('voice-status').textContent='Llamada cerrada.';
+  });
+})();
 </script>
 </body>
 </html>
