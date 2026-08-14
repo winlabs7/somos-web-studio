@@ -45,6 +45,8 @@ class Handler(SimpleHTTPRequestHandler):
             return self._serve_html("creadores.html")
         if route == "/marcas":
             return self._serve_html("marcas.html")
+        if route == "/trabaja":
+            return self._serve_html("trabaja.html")
         return super().do_GET()
 
     def do_POST(self):
