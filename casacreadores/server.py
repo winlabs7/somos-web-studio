@@ -39,14 +39,15 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(data)
 
+    def _redirect(self, loc):
+        self.send_response(302)
+        self.send_header("Location", loc)
+        self.end_headers()
+
     def do_GET(self):
         route = self.path.split("?", 1)[0].rstrip("/") or "/"
-        if route == "/creadores":
-            return self._serve_html("creadores.html")
-        if route == "/marcas":
-            return self._serve_html("marcas.html")
-        if route == "/trabaja":
-            return self._serve_html("trabaja.html")
+        if route in {"/creadores", "/marcas", "/trabaja"}:
+            return self._redirect("/")
         return super().do_GET()
 
     def do_POST(self):
