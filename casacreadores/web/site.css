@@ -267,3 +267,19 @@ footer a:hover{color:var(--coral)}
 @media (prefers-reduced-motion:reduce){
   .word-track,.studio-marq-track,.reveal{animation:none;transition:none;opacity:1;transform:none}
 }
+
+.who-lines{margin-top:48px;display:flex;flex-direction:column;gap:18px;max-width:36em}
+.who-line{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:.02em;color:var(--white)}
+.filter-note{margin-top:40px;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);max-width:36em}
+#semana{padding:80px 0 40px}
+.apply-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;position:relative;z-index:1}
+.apply-faq{margin-top:36px}
+.apply-form{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:18px}
+.apply-form label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+.apply-form input{font-family:'DM Sans',sans-serif;font-size:16px;color:var(--white);background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px 16px;letter-spacing:0;text-transform:none}
+.apply-form input:focus{outline:none;border-color:rgba(191,48,40,.55)}
+.apply-form .btn-coral{margin-top:8px;border:0;cursor:pointer;width:100%;text-align:center}
+.apply-form .btn-coral:disabled{opacity:.6;cursor:wait}
+@media (max-width:960px){
+  .apply-split{grid-template-columns:1fr;gap:36px}
+}
