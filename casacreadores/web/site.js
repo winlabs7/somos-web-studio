@@ -3,7 +3,6 @@
     "/img/estudio-piso-podcast-bts.jpg",
     "/img/estudio-lounge-warm.jpg",
     "/img/estudio-set-streaming-perfume.jpg",
-    "/img/estudio-set-beauty-live.jpg",
     "/img/estudio-podcast-1.jpg",
     "/img/estudio-vanity-led.jpg",
     "/img/estudio-estanteria-beauty.jpg",
@@ -11,7 +10,6 @@
     "/img/estudio-escritorio-rosa-2.jpg",
     "/img/estudio-lounge-ambar.jpg",
     "/img/estudio-nook-lectura.jpg",
-    "/img/estudio-podcast-2.jpg",
     "/img/estudio-camara-sony.jpg",
     "/img/estudio-set-mariposa-en-uso.jpg",
     "/img/estudio-set-mariposa.jpg"
