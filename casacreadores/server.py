@@ -27,6 +27,29 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(raw)
 
+    def _serve_html(self, name):
+        path = WEB / name
+        try:
+            data = path.read_bytes()
+        except OSError:
+            return self.send_error(404)
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
+    def _redirect(self, loc):
+        self.send_response(302)
+        self.send_header("Location", loc)
+        self.end_headers()
+
+    def do_GET(self):
+        route = self.path.split("?", 1)[0].rstrip("/") or "/"
+        if route in {"/creadores", "/marcas", "/trabaja"}:
+            return self._redirect("/")
+        return super().do_GET()
+
     def do_POST(self):
         length = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(length) if length else b"{}"
