@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>La Casa de los Creadores · Comercio Creativo</title>
-<meta name="description" content="Agencia de talento en Laureles, Medellín. 35+ creadores. Más de $500 millones COP al mes. Si ya tienes público, lo monetizamos. Si estás creciendo, empiezas en live.">
+<meta name="description" content="Agencia de talento en Laureles, Medellín. Más de 50 creadoras, un solo edificio. TikTok Live: el 100% es tuyo. TikTok Shop, UGC y monetizar tu comunidad con un equipo 24/7: 50/50. Construimos tu audiencia en Estados Unidos desde cero.">
 <meta property="og:title" content="La Casa de los Creadores · Comercio Creativo">
-<meta property="og:description" content="Si ya tienes público, lo monetizamos. Si estás creciendo, empiezas en live.">
+<meta property="og:description" content="TikTok Live: el 100% es tuyo. Shop, UGC y comunidad con equipo 24/7: 50/50. Audiencia de EE.UU. desde cero. Más de 50 creadoras en un edificio de Laureles.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://comerciocreativo.com/">
+<meta property="og:url" content="https://casacreadores.co/">
+<meta property="og:site_name" content="La Casa de los Creadores">
+<link rel="canonical" href="https://casacreadores.co/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -81,7 +83,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .word-track span i{font-style:normal;color:var(--gold);margin:0 4px}
 
 .stats-bar{background:var(--white);padding:88px 48px;position:relative;overflow:hidden}
-.stats-bar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.stats-bar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
 .stat-number{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,6vw,80px);line-height:.9;margin-bottom:14px;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-line{width:52px;height:3px;border-radius:2px;margin-bottom:16px;transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease-btn);background:linear-gradient(90deg,var(--coral),var(--gold))}
 .stats-bar.is-counting .stat-line{transform:scaleX(1)}
@@ -224,6 +226,25 @@ footer{background:var(--bg);padding:40px 48px;display:flex;justify-content:space
 footer a{color:var(--gray);text-decoration:none}
 footer a:hover{color:var(--coral)}
 
+.stat-number.is-word{font-size:clamp(30px,3.2vw,46px)}
+.stats-foot{max-width:1280px;margin:32px auto 0;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6f6864}
+
+#formas{background:var(--bg2)}
+.lane-day{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;padding-top:32px;border-top:1px solid var(--border)}
+.lane-day-k{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+.lane-day p{color:var(--gray);font-size:15px;font-weight:300;line-height:1.7}
+
+.hero-fine{margin-top:20px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+.lane-pick{margin-top:26px}
+.lane-pick-k{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.lane-chips{display:flex;flex-wrap:wrap;gap:10px}
+.lane-chip{background:transparent;border:1px solid var(--border);color:var(--gray);border-radius:999px;padding:9px 16px;font-size:13px;cursor:pointer;transition:color .25s,border-color .25s,background .25s}
+.lane-chip:hover{color:var(--white);border-color:var(--coral)}
+.lane-chip.is-on{background:var(--coral-dim);border-color:var(--coral);color:var(--white)}
+
+.footer-social{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .75s ease,transform .75s ease}
 .reveal.visible{opacity:1;transform:none}
 
@@ -254,6 +275,7 @@ footer a:hover{color:var(--coral)}
   .studio-featured{width:100%}
   .studio-featured img{height:240px}
   .plans{grid-template-columns:1fr}
+  .lane-day{grid-template-columns:1fr;gap:22px}
   .plan.side,.plan.featured{transform:none;opacity:1}
   .voice-split{grid-template-columns:1fr}
   footer{flex-direction:column;text-align:center;padding:32px 24px}
@@ -275,6 +297,7 @@ footer a:hover{color:var(--coral)}
   <a class="nav-logo" href="#inicio">LA CASA<span>.</span></a>
   <div class="nav-links">
     <a class="nav-link" href="#inicio">Inicio</a>
+    <a class="nav-link" href="#formas">Formas</a>
     <a class="nav-link" href="#oficio">Oficio</a>
     <a class="nav-link" href="#estudio">Estudio</a>
     <a class="nav-link" href="#planes">Planes</a>
@@ -288,6 +311,7 @@ footer a:hover{color:var(--coral)}
 <div class="nav-mobile" id="navMobile">
   <div class="nav-mobile-label">La Casa de los Creadores</div>
   <a href="#inicio">Inicio</a>
+  <a href="#formas">Formas</a>
   <a href="#oficio">Oficio</a>
   <a href="#estudio">Estudio</a>
   <a href="#planes">Planes</a>
@@ -299,14 +323,15 @@ footer a:hover{color:var(--coral)}
   <div class="hero-noise"></div>
   <div class="hero-grid"></div>
   <div class="wrap hero-copy">
-    <span class="hero-label">Aceptando creadores · Laureles</span>
-    <h1 class="hero-headline">Tu público ya te quiere.<br><em>Nosotros hacemos que pague.</em></h1>
-    <p class="hero-sub">Si ya tienes público, lo monetizamos ahora. Si todavía creces, empiezas en vivo.</p>
-    <p class="hero-detail">Comunidad primero; después se cobra. Todos arrancan igual: que alguien vuelva mañana. Lo más rápido es el live — TikTok, Twitch, Kick — hablarle a gente de verdad todos los días. Cuando ya hay chat, se vende. Marcas. O tus cursos. El podcast no es el premio al final: es cómo te vuelves el experto que puede cobrar por enseñar.</p>
+    <span class="hero-label">La Casa de los Creadores · TikTok Live + Shop · comunidad EE.UU.</span>
+    <h1 class="hero-headline">Tú creas.<br><em>Nosotros hacemos que escale.</em></h1>
+    <p class="hero-sub">Un edificio en Laureles. Más de 50 creadoras. Podcast y colaboraciones entre nosotras — tu comunidad crece más rápido.</p>
+    <p class="hero-detail">Lunes a viernes. Tu Live: 100% tuyo. Shop y monetizar tu comunidad con un equipo 24/7: 50/50. Construimos tu audiencia en Estados Unidos desde cero — no dependemos de tu following en Colombia.</p>
     <div class="hero-btns">
-      <a class="btn-coral" href="#aplicar">Soy creador</a>
+      <a class="btn-coral" href="#aplicar">Hablar con Sol</a>
       <a class="btn-ghost" href="#marcas">Soy marca</a>
     </div>
+    <p class="hero-fine">O déjanos nombre + WhatsApp + ciudad. Una de nosotras te escribe.</p>
   </div>
   <div class="word-marq" aria-hidden="true">
     <div class="word-track">
@@ -321,23 +346,88 @@ footer a:hover{color:var(--coral)}
 <div class="stats-bar" id="statsBar">
   <div class="stats-bar-inner">
     <div class="stat-item">
-      <div class="stat-number"><span data-count="35">0</span>+</div>
+      <div class="stat-number"><span data-count="50">0</span>+</div>
       <div class="stat-line"></div>
-      <div class="stat-label">Creadores que representamos</div>
+      <div class="stat-label">Creadoras en la casa</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number" data-count="500">0</div>
+      <div class="stat-number" data-count="1">0</div>
       <div class="stat-line"></div>
-      <div class="stat-label">Millones COP / mes</div>
-      <div class="stat-note">más de USD 100.000</div>
+      <div class="stat-label">Edificio · Laureles</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number" data-count="3">0</div>
+      <div class="stat-number is-word">Podcast</div>
       <div class="stat-line"></div>
-      <div class="stat-label">Países: CO · MX · US</div>
+      <div class="stat-label">+ colaboraciones entre creadoras</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number is-word">EE.UU.</div>
+      <div class="stat-line"></div>
+      <div class="stat-label">Audiencia que construimos desde cero</div>
+      <div class="stat-note">todas trabajando en marca + comunidad</div>
     </div>
   </div>
+  <div class="stats-foot">Más de $500 millones COP al mes en la casa · más de USD 100.000</div>
 </div>
+
+<section id="formas">
+  <div class="wrap">
+    <span class="section-label reveal">Cómo se construye</span>
+    <h2 class="section-headline reveal">Tres formas de construir.<br><em>Un equipo.</em></h2>
+    <p class="lede reveal">Agencia de talento: TikTok Live, TikTok Shop, y monetizar tu comunidad con un equipo 24/7 alrededor de tu marca. Tú creas en el estudio. Nosotros hacemos que escale — en EE.UU.</p>
+    <div class="plans">
+      <article class="plan side reveal">
+        <h3>TikTok Live</h3>
+        <div class="price">100% tuyo</div>
+        <p class="muted">Tres horas al día en vivo, en Laureles. Tú haces el Live. El 100% es tuyo: TikTok te paga a ti. Nosotros ponemos el piso: celulares de la agencia, cuentas de EE.UU., set y streaming listos.</p>
+        <ul>
+          <li>3 h de Live al día (L–V)</li>
+          <li>100% del Live para la creadora</li>
+          <li>Celulares y cuentas de EE.UU. de la casa</li>
+        </ul>
+        <a class="btn-ghost" href="#aplicar">Hablar de Live</a>
+      </article>
+      <article class="plan featured reveal">
+        <div class="plan-badge">Con la casa</div>
+        <h3>TikTok Shop + UGC</h3>
+        <div class="price">50/50</div>
+        <p class="muted">Contenido que vende producto, no solo vistas. Nichos SOMOS (hombre): suplementos, outfits, cuidado masculino, perfume, Serenity. Lo que entra por Shop y UGC con la casa: 50/50.</p>
+        <ul>
+          <li>Shop y UGC en el mismo piso</li>
+          <li>50/50 con la casa</li>
+          <li>Producto real, audiencia de EE.UU.</li>
+        </ul>
+        <a class="btn-coral" href="#aplicar">Hablar de Shop</a>
+      </article>
+      <article class="plan side reveal">
+        <h3>Comunidad · equipo 24/7</h3>
+        <div class="price">50/50</div>
+        <p class="muted">Monetizar tu comunidad con un equipo 24/7 alrededor de tu marca. Edición, clips, community, y el equipo que atiende tu comunidad todos los días. Podcast y colaboraciones entre las más de 50 creadoras de la casa — tu comunidad crece más rápido. Esa parte también es 50/50. La audiencia la construimos en Estados Unidos desde cero: no venimos a monetizar tu following de Colombia.</p>
+        <ul>
+          <li>Equipo 24/7 alrededor de tu marca</li>
+          <li>Comunidad y fans · 50/50</li>
+          <li>Audiencia de EE.UU. desde cero</li>
+        </ul>
+        <a class="btn-ghost" href="#aplicar">Hablar de comunidad</a>
+      </article>
+    </div>
+
+    <div class="lane-day reveal">
+      <div>
+        <span class="lane-day-k">El día · L–V</span>
+        <p>Unas 5 horas: 3 de Live y 2 de contenido.</p>
+      </div>
+      <div>
+        <span class="lane-day-k">Para quién</span>
+        <p>No pedimos following de Colombia. Pedimos lunes a viernes en Laureles, actitud, ganas — y ganas de construir en EE.UU.</p>
+      </div>
+      <div>
+        <span class="lane-day-k">Cómo se entra</span>
+        <p>Hablas con Sol, o dejas nombre, WhatsApp y ciudad. Una de nosotras te escribe. No pedimos contraseñas.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="quien">
   <div class="wrap">
@@ -491,7 +581,7 @@ footer a:hover{color:var(--coral)}
 <section id="planes">
   <div class="wrap">
     <span class="section-label reveal">Planes</span>
-    <h2 class="section-headline reveal">Tres formas.<br><em>Cero cuota de entrada.</em></h2>
+    <h2 class="section-headline reveal">Representación y expansión.<br><em>Cero cuota de entrada.</em></h2>
     <p class="lede reveal">Comisión, o comisión más operación, o sociedad. Tú eres dueño de las cuentas desde el día uno.</p>
     <div class="plans">
       <article class="plan side reveal">
@@ -570,9 +660,17 @@ footer a:hover{color:var(--coral)}
     <div>
       <span class="section-label">Hablar</span>
       <h2 class="section-headline">Una entrevista de voz.<br><em>Cuatro minutos.</em></h2>
-      <p class="lede">Sin formulario. Un agente te pregunta handle, en qué momento estás, y qué quieres vender — o el brief si eres marca. El equipo humano sigue por WhatsApp.</p>
+      <p class="lede">Sin formulario. Sol te pregunta tu handle, en qué momento estás y qué quieres construir — o el brief si eres marca. El equipo humano sigue por WhatsApp.</p>
+      <div class="lane-pick">
+        <span class="lane-pick-k" id="lanePickLabel">¿Qué te interesa? (opcional)</span>
+        <div class="lane-chips" role="group" aria-labelledby="lanePickLabel">
+          <button class="lane-chip" type="button" data-lane="live" aria-pressed="false">TikTok Live</button>
+          <button class="lane-chip" type="button" data-lane="shop" aria-pressed="false">TikTok Shop + UGC</button>
+          <button class="lane-chip" type="button" data-lane="comunidad" aria-pressed="false">Comunidad 24/7</button>
+        </div>
+      </div>
       <div class="hero-btns" style="margin-top:28px">
-        <button class="btn-coral" type="button" id="btn-creador">Hablar como creador</button>
+        <button class="btn-coral" type="button" id="btn-creador">Hablar con Sol</button>
         <button class="btn-ghost" type="button" id="btn-marca">Hablar como marca</button>
       </div>
     </div>
@@ -592,7 +690,11 @@ footer a:hover{color:var(--coral)}
 
 <footer>
   <a class="nav-logo" href="#inicio">LA CASA<span>.</span></a>
-  <div>comerciocreativo.com · Laureles, Medellín</div>
+  <div>casacreadores.co · Laureles, Medellín</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/casacreadores.co/" target="_blank" rel="noopener">Instagram · @casacreadores.co</a>
+    <a href="https://www.tiktok.com/@casacreadores.co" target="_blank" rel="noopener">TikTok · @casacreadores.co</a>
+  </div>
   <div>© 2026 Comercio Creativo S.A.S. · NIT 901.474.608-1</div>
 </footer>
 
@@ -690,8 +792,24 @@ menuBtn.addEventListener("click", () => {
 });
 navMobile.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
 
-document.getElementById("btn-creador").addEventListener("click", () => CasaVoice.start("creador"));
-document.getElementById("btn-marca").addEventListener("click", () => CasaVoice.start("marca"));
+let laneChoice = "";
+const laneChips = document.querySelectorAll(".lane-chip");
+laneChips.forEach(chip => {
+  chip.addEventListener("click", () => {
+    const wasOn = chip.classList.contains("is-on");
+    laneChips.forEach(c => { c.classList.remove("is-on"); c.setAttribute("aria-pressed", "false"); });
+    if (wasOn) {
+      laneChoice = "";
+    } else {
+      chip.classList.add("is-on");
+      chip.setAttribute("aria-pressed", "true");
+      laneChoice = chip.dataset.lane;
+    }
+  });
+});
+
+document.getElementById("btn-creador").addEventListener("click", () => CasaVoice.start("creador", laneChoice));
+document.getElementById("btn-marca").addEventListener("click", () => CasaVoice.start("marca", laneChoice));
 document.getElementById("btn-hang").addEventListener("click", () => {
   CasaVoice.stop();
   document.getElementById("voice-status").textContent = "Llamada cerrada.";
