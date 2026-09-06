@@ -3,26 +3,299 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Casa de los Creadores · Agencia de talento</title>
-<meta name="description" content="Agencia de talento en Laureles. Influencers, creadores y UGC. El equipo para crecer y cobrar.">
-<meta property="og:title" content="La Casa de los Creadores">
-<meta property="og:description" content="Tú creas. Nosotros hacemos que escale.">
+<title>La Casa de los Creadores · Comercio Creativo</title>
+<meta name="description" content="Agencia de talento en Laureles, Medellín. Más de 50 creadoras, un solo edificio. TikTok Live: el 100% es tuyo. TikTok Shop, UGC y monetizar tu comunidad con un equipo 24/7: 50/50. Construimos tu audiencia en Estados Unidos desde cero.">
+<meta property="og:title" content="La Casa de los Creadores · Comercio Creativo">
+<meta property="og:description" content="TikTok Live: el 100% es tuyo. Shop, UGC y comunidad con equipo 24/7: 50/50. Audiencia de EE.UU. desde cero. Más de 50 creadoras en un edificio de Laureles.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://comerciocreativo.com">
+<meta property="og:url" content="https://casacreadores.co/">
+<meta property="og:site_name" content="La Casa de los Creadores">
+<link rel="canonical" href="https://casacreadores.co/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/site.css">
+<style>
+:root{
+  --bg:#080808;--bg2:#0E0E0E;--bg3:#141414;
+  --coral:#BF3028;--coral-dim:rgba(191,48,40,.12);
+  --gold:#D4AF55;--blue:#1A8FE3;
+  --white:#fff;--gray:#ACA4A0;--muted:#8A8280;
+  --border:rgba(255,255,255,.08);
+  --ease-btn:cubic-bezier(.25,.46,.45,.94);
+  --ease-card:cubic-bezier(.23,1,.32,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--coral);color:#fff}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font-family:inherit}
+.wrap{width:min(1280px,calc(100% - 96px));margin:0 auto}
+.section-label{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--coral);text-transform:uppercase;margin-bottom:22px}
+.section-headline{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,5.4vw,76px);line-height:.95;letter-spacing:.02em;margin-bottom:20px}
+.section-headline em{font-style:normal;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lede{color:var(--gray);font-size:16px;line-height:1.7;max-width:40em;font-weight:300}
+section{padding:120px 0}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,8,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.14em;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--coral)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-link{font-size:12px;font-weight:500;letter-spacing:.12em;color:var(--gray);text-decoration:none;text-transform:uppercase;padding-bottom:2px;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+.nav-link:hover{color:var(--white);border-bottom-color:var(--coral)}
+.nav-cta{color:var(--white);border:1px solid rgba(255,255,255,.18);padding:9px 22px;border-radius:10px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;background:rgba(255,255,255,.04);transition:all .3s var(--ease-btn)}
+.nav-cta:hover{border-color:var(--coral);background:rgba(191,48,40,.1);transform:translateY(-2px);box-shadow:0 4px 20px rgba(191,48,40,.22)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;cursor:pointer;background:none;border:none;padding:4px;z-index:110}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--white);border-radius:2px;transition:all .3s;transform-origin:center}
+.nav-hamburger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.is-open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{position:fixed;inset:0;z-index:99;background:rgba(8,8,8,.97);backdrop-filter:blur(24px);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .35s,transform .35s,visibility 0s .35s;pointer-events:none}
+.nav-mobile.is-open{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition:opacity .35s,transform .35s}
+.nav-mobile-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+.nav-mobile a{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:.06em;color:var(--white);text-decoration:none;padding:12px 0;transition:color .25s}
+.nav-mobile a:hover{color:var(--coral)}
+.nav-mobile .nav-mobile-cta{margin-top:28px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:14px 40px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.04)}
+
+#inicio{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;padding:120px 0 88px;overflow:hidden;background:
+  radial-gradient(ellipse 70% 55% at 18% 20%,rgba(191,48,40,.16),transparent 60%),
+  radial-gradient(ellipse 55% 50% at 88% 70%,rgba(212,175,85,.1),transparent 58%),
+  var(--bg)}
+.hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.55;pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
+.hero-copy{position:relative;z-index:2;max-width:920px}
+.hero-label{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--coral);text-transform:uppercase;margin-bottom:28px;padding:6px 14px;border:1px solid rgba(191,48,40,.4);border-radius:6px;background:rgba(191,48,40,.08)}
+.hero-headline{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,96px);line-height:.9;letter-spacing:.01em;margin-bottom:28px}
+.hero-headline em{font-style:normal;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{color:var(--white);font-size:clamp(17px,2vw,20px);font-weight:700;line-height:1.45;max-width:640px;margin-bottom:16px}
+.hero-detail{color:var(--gray);font-size:16px;line-height:1.7;max-width:680px;margin-bottom:36px;font-weight:300}
+.hero-btns{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.btn-coral{display:inline-block;background:linear-gradient(135deg,#BF3028,#D4AF55);color:var(--white);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px 40px;border-radius:10px;text-decoration:none;border:0;cursor:pointer;box-shadow:0 2px 18px rgba(191,48,40,.28);transition:all .35s var(--ease-btn)}
+.btn-coral:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(191,48,40,.38);filter:brightness(1.06)}
+.btn-ghost{display:inline-block;color:var(--white);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px 36px;border:1px solid rgba(255,255,255,1);border-radius:10px;background:rgba(255,255,255,.04);backdrop-filter:blur(8px);text-decoration:none;cursor:pointer;transition:all .35s var(--ease-btn)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:rgba(212,175,85,.5);background:rgba(255,255,255,.07)}
+
+.word-marq{position:absolute;left:0;right:0;bottom:0;z-index:3;border-top:1px solid var(--border);background:rgba(8,8,8,.55);backdrop-filter:blur(8px);overflow:hidden;padding:12px 0}
+.word-track{display:flex;width:max-content;gap:0;animation:marquee 28s linear infinite}
+.word-marq:hover .word-track{animation-play-state:paused}
+.word-track span{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding:0 28px;white-space:nowrap}
+.word-track span i{font-style:normal;color:var(--gold);margin:0 4px}
+
+.stats-bar{background:var(--white);padding:88px 48px;position:relative;overflow:hidden}
+.stats-bar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.stat-number{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,6vw,80px);line-height:.9;margin-bottom:14px;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-line{width:52px;height:3px;border-radius:2px;margin-bottom:16px;transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease-btn);background:linear-gradient(90deg,var(--coral),var(--gold))}
+.stats-bar.is-counting .stat-line{transform:scaleX(1)}
+.stat-item:nth-child(2) .stat-line{transition-delay:.12s}
+.stat-item:nth-child(3) .stat-line{transition-delay:.24s}
+.stat-item:nth-child(4) .stat-line{transition-delay:.36s}
+.stat-label{font-size:14px;font-weight:600;color:#3a3532}
+.stat-note{font-size:12px;color:#8A8280;margin-top:4px;font-weight:400}
+
+#caminos{padding:100px 0 0;background:var(--bg)}
+.paths-intro{padding-bottom:40px}
+.paths-intro .section-headline{margin-bottom:0}
+.paths{display:grid;grid-template-columns:1.12fr .88fr;min-height:86vh}
+.path{position:relative;padding:88px 64px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.path-kicker{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:22px}
+.path h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,4.2vw,58px);line-height:.95;letter-spacing:.02em;margin-bottom:22px;max-width:14ch}
+.path p{font-size:16px;font-weight:300;line-height:1.7;max-width:38em}
+.path-left{background:
+  radial-gradient(ellipse 80% 70% at 0% 100%,rgba(191,48,40,.22),transparent 55%),
+  linear-gradient(180deg,#120c0c,var(--bg2));
+  border-right:1px solid var(--border)}
+.path-left .path-kicker{color:var(--gold)}
+.path-left p{color:var(--gray)}
+.path-left h3 em{font-style:normal;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.path-right{color:#fff}
+.path-right .path-inner{position:relative;z-index:1}
+.path-right .path-kicker{color:#E8C97A}
+.path-right p{color:#E4DDD6}
+.path-ghost{position:absolute;right:24px;bottom:10px;font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,12vw,160px);line-height:1;opacity:.07;letter-spacing:.04em;pointer-events:none}
+
+#quien{background:var(--bg);padding:120px 0 80px}
+.who-head{max-width:720px;margin-bottom:56px}
+.who-row{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:28px 0 56px;border-top:1px solid var(--border);cursor:pointer;transition:opacity .35s}
+.who-row:hover{opacity:.96}
+.who-row.flip{grid-template-columns:.9fr 1.1fr}
+.who-row.flip .who-media{order:2}
+.who-media{overflow:hidden;border-radius:16px;border:1px solid var(--border)}
+.who-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-card)}
+.who-row:hover .who-media img{transform:scale(1.04)}
+.who-row.r1 .who-media{height:460px}
+.who-row.r2 .who-media{height:360px}
+.who-row.r3 .who-media{height:420px}
+.who-row.r4 .who-media{height:340px}
+.who-row.r5 .who-media{height:400px}
+.who-copy{max-width:460px}
+.who-num{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--coral);margin-bottom:16px}
+.who-copy h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,3.6vw,52px);line-height:.95;letter-spacing:.02em;margin-bottom:14px}
+.who-copy p{color:var(--gray);font-weight:300;font-size:16px}
+.who-more{display:inline-block;margin-top:18px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+#oficio{background:var(--bg2);padding:120px 0}
+.oficio-grid{display:grid;grid-template-columns:minmax(240px,.42fr) 1fr;gap:72px;align-items:start}
+.oficio-sticky{position:sticky;top:110px}
+.verb{border-top:1px solid var(--border);padding:0;cursor:pointer;transition:background .3s}
+.verb:last-child{border-bottom:1px solid var(--border)}
+.verb-head{display:grid;grid-template-columns:minmax(160px,.38fr) 1fr auto;gap:24px;align-items:center;padding:26px 8px}
+.verb-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,3.4vw,48px);letter-spacing:.03em;line-height:1}
+.verb-tease{color:var(--gray);font-weight:300;font-size:15px}
+.verb-plus{width:28px;height:28px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;transition:transform .3s}
+.verb.open .verb-plus{transform:rotate(45deg);border-color:var(--coral);color:var(--coral)}
+.verb-extra{max-height:0;overflow:hidden;transition:max-height .45s var(--ease-card),padding .45s}
+.verb.open .verb-extra{max-height:240px;padding:0 8px 26px 0}
+.verb-extra p{color:var(--muted);font-weight:300;font-size:15px;line-height:1.7;max-width:46em}
+.verb:hover .verb-name{background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+#estudio{background:var(--white);color:#1a1614;padding:120px 0 80px}
+#estudio .section-label{color:var(--coral)}
+#estudio .section-headline{color:#111}
+#estudio .lede{color:#5c5652}
+.studio-type{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.08em;color:#8A8280;min-height:1.4em;margin:14px 0 8px}
+.studio-quiet{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:#8A8280;margin-bottom:36px}
+.studio-featured{width:min(68%,100%);margin:0 auto 48px;border:0;background:none;padding:0;cursor:pointer;display:block;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.18)}
+.studio-featured img{width:100%;height:min(62vh,560px);object-fit:cover;transition:transform .8s var(--ease-card)}
+.studio-featured:hover img{transform:scale(1.03)}
+.studio-marq{overflow:hidden;margin:14px 0}
+.studio-marq-track{display:flex;width:max-content;gap:12px;animation:marquee 38s linear infinite}
+.studio-marq.rev .studio-marq-track{animation:marquee-rev 46s linear infinite}
+.studio-marq:hover .studio-marq-track{animation-play-state:paused}
+.studio-marq button{border:0;padding:0;background:none;cursor:pointer;flex-shrink:0}
+.studio-marq img{width:220px;height:148px;object-fit:cover;border-radius:14px}
+
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.lightbox.is-open{opacity:1;visibility:visible;transition:opacity .3s}
+.lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:12px}
+.lb-btn{position:absolute;width:48px;height:48px;border:none;background:rgba(255,255,255,.1);border-radius:50%;color:#fff;font-size:22px;cursor:pointer}
+.lb-btn:hover{background:rgba(255,255,255,.22)}
+.lb-close{top:24px;right:32px}
+.lb-prev{left:24px;top:50%;transform:translateY(-50%)}
+.lb-next{right:24px;top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.1em}
+
+#preguntas{background:var(--bg2)}
+.plans{display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:16px;margin-top:48px;align-items:stretch}
+.plan{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;color:var(--white)}
+.plan.side{opacity:.88;transform:translateY(18px)}
+.plan.featured{position:relative;padding:40px 30px;transform:translateY(-12px);background:linear-gradient(180deg,#1c1410,var(--bg3));box-shadow:0 22px 56px rgba(191,48,40,.16);border:1px solid transparent;background-image:linear-gradient(180deg,#1c1410,var(--bg3)),linear-gradient(135deg,#BF3028,#D4AF55);background-origin:border-box;background-clip:padding-box,border-box}
+.plan-badge{display:inline-block;background:linear-gradient(135deg,#BF3028,#D4AF55);color:#fff;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.plan h3{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.04em;margin-bottom:6px}
+.plan.featured h3{font-size:38px}
+.plan .price{font-family:'Bebas Neue',sans-serif;font-size:44px;line-height:1;color:var(--gray);margin:8px 0}
+.plan.featured .price{font-size:56px;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.plan .muted{color:var(--gray);font-size:14px;font-weight:300}
+.plan ul{list-style:none;margin:18px 0 24px;flex:1}
+.plan li{padding:8px 0 8px 18px;position:relative;font-size:14px;color:#E8E2DC}
+.plan li::before{content:'';position:absolute;left:0;top:15px;width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.plan.featured li::before{background:var(--gold)}
+
+.faq{margin-top:0;max-width:760px}
+.faq details{border-bottom:1px solid var(--border);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;color:var(--white)}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{margin-top:10px;color:var(--gray);font-weight:300;font-size:15px}
+
+#aplicar{background:var(--bg);position:relative;overflow:hidden}
+#aplicar::before{content:'';position:absolute;top:50%;left:40%;transform:translate(-50%,-50%);width:820px;height:820px;background:radial-gradient(circle,rgba(191,48,40,.12),rgba(212,175,85,.04) 42%,transparent 66%);pointer-events:none;filter:blur(18px)}
+.voice-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;position:relative;z-index:1}
+.voice-panel{display:none;background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:24px}
+.voice-panel.on{display:block}
+.v-status{font-weight:700;margin-bottom:10px}
+.v-log{max-height:240px;overflow:auto;background:var(--bg3);border-radius:14px;padding:12px 14px;margin:12px 0;border:1px solid var(--border)}
+.v-line{font-size:.9rem;margin:6px 0}
+.v-line.ai{color:var(--gold)}
+.v-line.you{color:var(--gray)}
+.v-actions{display:flex;flex-wrap:wrap;gap:10px}
+.note{font-size:.82rem;color:var(--muted);margin-top:10px}
+
+.modal-overlay{position:fixed;inset:0;z-index:180;background:rgba(0,0,0,.78);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.modal-overlay.is-open{opacity:1;visibility:visible;transition:opacity .3s}
+.modal{width:min(560px,100%);background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:36px 32px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.modal-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:20px;cursor:pointer}
+.modal-kicker{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
+.modal h3{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:.03em;line-height:1;margin-bottom:16px}
+.modal p{color:var(--gray);font-weight:300;font-size:15px;line-height:1.7;margin-bottom:12px}
+
+footer{background:var(--bg);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;font-family:'DM Mono',monospace;letter-spacing:.06em;flex-wrap:wrap;gap:16px;border-top:1px solid var(--border)}
+footer a{color:var(--gray);text-decoration:none}
+footer a:hover{color:var(--coral)}
+
+.stat-number.is-word{font-size:clamp(30px,3.2vw,46px)}
+
+#formas{background:var(--bg2)}
+.lane-day{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;padding-top:32px;border-top:1px solid var(--border)}
+.lane-day-k{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+.lane-day p{color:var(--gray);font-size:15px;font-weight:300;line-height:1.7}
+
+.hero-fine{margin-top:20px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+.lane-pick{margin-top:26px}
+.lane-pick-k{display:block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.lane-chips{display:flex;flex-wrap:wrap;gap:10px}
+.lane-chip{background:transparent;border:1px solid var(--border);color:var(--gray);border-radius:999px;padding:9px 16px;font-size:13px;cursor:pointer;transition:color .25s,border-color .25s,background .25s}
+.lane-chip:hover{color:var(--white);border-color:var(--coral)}
+.lane-chip.is-on{background:var(--coral-dim);border-color:var(--coral);color:var(--white)}
+
+.footer-social{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@keyframes marquee{to{transform:translateX(-50%)}}
+@keyframes marquee-rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+@media (max-width:960px){
+  .wrap{width:min(100%,calc(100% - 40px))}
+  nav{padding:14px 20px}
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  section{padding:80px 0}
+  #inicio{padding:110px 0 72px;min-height:100svh}
+  .hero-headline{font-size:clamp(56px,14vw,72px)}
+  .stats-bar{padding:56px 24px}
+  .stats-bar-inner{grid-template-columns:1fr 1fr;gap:28px}
+  .paths{grid-template-columns:1fr}
+  .path{padding:56px 28px;min-height:auto}
+  .path-left{border-right:0;border-bottom:1px solid var(--border)}
+  .path-ghost{display:none}
+  .who-row,.who-row.flip{grid-template-columns:1fr;gap:22px}
+  .who-row.flip .who-media{order:0}
+  .who-row.r1 .who-media,.who-row.r2 .who-media,.who-row.r3 .who-media,.who-row.r4 .who-media,.who-row.r5 .who-media{height:240px}
+  .oficio-grid{grid-template-columns:1fr;gap:28px}
+  .oficio-sticky{position:static}
+  .verb-head{grid-template-columns:1fr auto;gap:12px}
+  .verb-tease{grid-column:1/-2}
+  .studio-featured{width:100%}
+  .studio-featured img{height:240px}
+  .plans{grid-template-columns:1fr}
+  .lane-day{grid-template-columns:1fr;gap:22px}
+  .plan.side,.plan.featured{transform:none;opacity:1}
+  .voice-split{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center;padding:32px 24px}
+}
+@media (max-width:640px){
+  .stats-bar-inner{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .btn-coral,.btn-ghost{text-align:center}
+  .lb-prev{left:8px}.lb-next{right:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  .word-track,.studio-marq-track,.reveal{animation:none;transition:none;opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
 
 <nav>
   <a class="nav-logo" href="#inicio">LA CASA<span>.</span></a>
   <div class="nav-links">
-    <a class="nav-link" href="#oficio">La agencia</a>
+    <a class="nav-link" href="#inicio">Inicio</a>
+    <a class="nav-link" href="#formas">Formas</a>
+    <a class="nav-link" href="#oficio">Oficio</a>
     <a class="nav-link" href="#estudio">Estudio</a>
-    <a class="nav-link" href="#aplicar">Hablar con Sol</a>
-    <a class="nav-cta" href="#aplicar">Hablar con Sol</a>
+    <a class="nav-cta" href="#aplicar">Aplicar · 4 min</a>
   </div>
   <button class="nav-hamburger" id="menuBtn" type="button" aria-label="Menú" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -31,109 +304,248 @@
 
 <div class="nav-mobile" id="navMobile">
   <div class="nav-mobile-label">La Casa de los Creadores</div>
-  <a href="#oficio">La agencia</a>
+  <a href="#inicio">Inicio</a>
+  <a href="#formas">Formas</a>
+  <a href="#oficio">Oficio</a>
   <a href="#estudio">Estudio</a>
-  <a href="#aplicar">Hablar con Sol</a>
+  <a href="#aplicar">Aplicar</a>
+  <a class="nav-mobile-cta" href="#aplicar">Aplicar · 4 min</a>
 </div>
 
 <header id="inicio">
   <div class="hero-noise"></div>
   <div class="hero-grid"></div>
   <div class="wrap hero-copy">
-    <span class="hero-label">Agencia de talento · Laureles</span>
+    <span class="hero-label">La Casa de los Creadores · TikTok Live + Shop · comunidad EE.UU.</span>
     <h1 class="hero-headline">Tú creas.<br><em>Nosotros hacemos que escale.</em></h1>
-    <p class="hero-sub">Influencers, creadores, UGC. El equipo para crecer y cobrar.</p>
+    <p class="hero-sub">Un edificio en Laureles. Más de 50 creadoras. Podcast y colaboraciones entre nosotras — tu comunidad crece más rápido.</p>
+    <p class="hero-detail">Lunes a viernes. Tu Live: 100% tuyo. Shop y monetizar tu comunidad con un equipo 24/7: 50/50. Construimos tu audiencia en Estados Unidos desde cero — no dependemos de tu following en Colombia.</p>
     <div class="hero-btns">
       <a class="btn-coral" href="#aplicar">Hablar con Sol</a>
-      <a class="btn-ghost" href="#estudio">Ver el estudio</a>
+      <a class="btn-ghost" href="#marcas">Soy marca</a>
     </div>
+    <p class="hero-fine">O déjanos nombre + WhatsApp + ciudad. Una de nosotras te escribe.</p>
   </div>
   <div class="word-marq" aria-hidden="true">
     <div class="word-track">
-      <span>INFLUENCERS <i>·</i> CREADORES <i>·</i> UGC <i>·</i> ESTUDIO <i>·</i> EQUIPO <i>·</i> LAURELES</span>
-      <span>INFLUENCERS <i>·</i> CREADORES <i>·</i> UGC <i>·</i> ESTUDIO <i>·</i> EQUIPO <i>·</i> LAURELES</span>
-      <span>INFLUENCERS <i>·</i> CREADORES <i>·</i> UGC <i>·</i> ESTUDIO <i>·</i> EQUIPO <i>·</i> LAURELES</span>
-      <span>INFLUENCERS <i>·</i> CREADORES <i>·</i> UGC <i>·</i> ESTUDIO <i>·</i> EQUIPO <i>·</i> LAURELES</span>
+      <span>LIVE <i>·</i> MARCAS <i>·</i> CURSOS <i>·</i> PODCAST <i>·</i> COMUNIDAD <i>·</i> STREAMING <i>·</i> MÉXICO <i>·</i> ESTADOS UNIDOS</span>
+      <span>LIVE <i>·</i> MARCAS <i>·</i> CURSOS <i>·</i> PODCAST <i>·</i> COMUNIDAD <i>·</i> STREAMING <i>·</i> MÉXICO <i>·</i> ESTADOS UNIDOS</span>
+      <span>LIVE <i>·</i> MARCAS <i>·</i> CURSOS <i>·</i> PODCAST <i>·</i> COMUNIDAD <i>·</i> STREAMING <i>·</i> MÉXICO <i>·</i> ESTADOS UNIDOS</span>
+      <span>LIVE <i>·</i> MARCAS <i>·</i> CURSOS <i>·</i> PODCAST <i>·</i> COMUNIDAD <i>·</i> STREAMING <i>·</i> MÉXICO <i>·</i> ESTADOS UNIDOS</span>
     </div>
   </div>
 </header>
 
 <div class="stats-bar" id="statsBar">
-  <div class="stats-bar-inner cols-3">
+  <div class="stats-bar-inner">
     <div class="stat-item">
-      <div class="stat-number"><span data-count="35">0</span>+</div>
+      <div class="stat-number"><span data-count="50">0</span>+</div>
       <div class="stat-line"></div>
-      <div class="stat-label">Talentos en la casa</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number" data-count="5">0</div>
-      <div class="stat-line"></div>
-      <div class="stat-label">Días en el estudio</div>
+      <div class="stat-label">Creadoras en la casa</div>
     </div>
     <div class="stat-item">
       <div class="stat-number" data-count="1">0</div>
       <div class="stat-line"></div>
-      <div class="stat-label">Techo. Laureles.</div>
+      <div class="stat-label">Edificio · Laureles</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number is-word">Podcast</div>
+      <div class="stat-line"></div>
+      <div class="stat-label">+ colaboraciones entre creadoras</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number is-word">EE.UU.</div>
+      <div class="stat-line"></div>
+      <div class="stat-label">Audiencia que construimos desde cero</div>
+      <div class="stat-note">todas trabajando en marca + comunidad</div>
     </div>
   </div>
 </div>
 
-<section id="oficio">
+<section id="formas">
   <div class="wrap">
-    <span class="section-label reveal">La agencia</span>
-    <h2 class="section-headline reveal">No pedimos un número.<br><em>Pedimos que quieras esto.</em></h2>
-    <p class="lede reveal">Si ya tienes following, lo hacemos cobrar. Si todavía no, lo armamos. Lo que sí: disponibilidad, actitud, y ganas de ganar.</p>
-    <div class="flujo cols-3">
-      <article class="flujo-step reveal">
-        <span class="flujo-num">01</span>
-        <h3>Disponibilidad</h3>
-        <p>Lunes a viernes, en Laureles. El piso es físico.</p>
+    <span class="section-label reveal">Cómo se construye</span>
+    <h2 class="section-headline reveal">Tres formas de construir.<br><em>Un equipo.</em></h2>
+    <p class="lede reveal">Agencia de talento: TikTok Live, TikTok Shop, y monetizar tu comunidad con un equipo 24/7 alrededor de tu marca. Tú creas en el estudio. Nosotros hacemos que escale — en EE.UU.</p>
+    <div class="plans">
+      <article class="plan side reveal">
+        <h3>TikTok Live</h3>
+        <div class="price">100% tuyo</div>
+        <p class="muted">Tres horas al día en vivo, en Laureles. Tú haces el Live. El 100% es tuyo: TikTok te paga a ti. Nosotros ponemos el piso: celulares de la agencia, cuentas de EE.UU., set y streaming listos.</p>
+        <ul>
+          <li>3 h de Live al día (L–V)</li>
+          <li>100% del Live para la creadora</li>
+          <li>Celulares y cuentas de EE.UU. de la casa</li>
+        </ul>
+        <a class="btn-ghost" href="#aplicar">Hablar de Live</a>
       </article>
-      <article class="flujo-step reveal">
-        <span class="flujo-num">02</span>
-        <h3>Actitud</h3>
-        <p>Llegas a crear. El equipo se queda con el resto.</p>
+      <article class="plan featured reveal">
+        <div class="plan-badge">Con la casa</div>
+        <h3>TikTok Shop + UGC</h3>
+        <div class="price">50/50</div>
+        <p class="muted">Contenido que vende producto, no solo vistas. Nichos SOMOS (hombre): suplementos, outfits, cuidado masculino, perfume, Serenity. Lo que entra por Shop y UGC con la casa: 50/50.</p>
+        <ul>
+          <li>Shop y UGC en el mismo piso</li>
+          <li>50/50 con la casa</li>
+          <li>Producto real, audiencia de EE.UU.</li>
+        </ul>
+        <a class="btn-coral" href="#aplicar">Hablar de Shop</a>
       </article>
-      <article class="flujo-step reveal">
-        <span class="flujo-num">03</span>
-        <h3>Ganas</h3>
-        <p>Quieres que esto sea un oficio. No un hobby de fin de semana.</p>
+      <article class="plan side reveal">
+        <h3>Comunidad · equipo 24/7</h3>
+        <div class="price">50/50</div>
+        <p class="muted">Monetizar tu comunidad con un equipo 24/7 alrededor de tu marca. Edición, clips, community, y el equipo que atiende tu comunidad todos los días. Podcast y colaboraciones entre las más de 50 creadoras de la casa — tu comunidad crece más rápido. Esa parte también es 50/50. La audiencia la construimos en Estados Unidos desde cero: no venimos a monetizar tu following de Colombia.</p>
+        <ul>
+          <li>Equipo 24/7 alrededor de tu marca</li>
+          <li>Comunidad y fans · 50/50</li>
+          <li>Audiencia de EE.UU. desde cero</li>
+        </ul>
+        <a class="btn-ghost" href="#aplicar">Hablar de comunidad</a>
       </article>
+    </div>
+
+    <div class="lane-day reveal">
+      <div>
+        <span class="lane-day-k">El día · L–V</span>
+        <p>Unas 5 horas: 3 de Live y 2 de contenido.</p>
+      </div>
+      <div>
+        <span class="lane-day-k">Para quién</span>
+        <p>No pedimos following de Colombia. Pedimos lunes a viernes en Laureles, actitud, ganas — y ganas de construir en EE.UU.</p>
+      </div>
+      <div>
+        <span class="lane-day-k">Cómo se entra</span>
+        <p>Hablas con Sol, o dejas nombre, WhatsApp y ciudad. Una de nosotras te escribe. No pedimos contraseñas.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="equipo-casa">
+<section id="quien">
+  <div class="wrap">
+    <div class="who-head">
+      <span class="section-label reveal">Para quién</span>
+      <h2 class="section-headline reveal">Cinco momentos.<br><em>Uno es el tuyo.</em></h2>
+    </div>
+
+    <article class="who-row r1 reveal" tabindex="0" role="button" data-modal="who1">
+      <div class="who-media"><img src="img/estudio-lounge-warm.jpg" alt="Lounge del estudio"></div>
+      <div class="who-copy">
+        <div class="who-num">01 · Ya creciste</div>
+        <h3>Ya creciste. El negocio, no.</h3>
+        <p>Hiciste el crecimiento. Falta la empresa alrededor.</p>
+        <span class="who-more">Leer más →</span>
+      </div>
+    </article>
+
+    <article class="who-row r2 flip reveal" tabindex="0" role="button" data-modal="who2">
+      <div class="who-media"><img src="img/estudio-camara-sony.jpg" alt="Cámara en trípode en el set"></div>
+      <div class="who-copy">
+        <div class="who-num">02 · En vivo</div>
+        <h3>Vives en el live.</h3>
+        <p>TikTok Live, Twitch, Kick, YouTube. El aire no se opera solo.</p>
+        <span class="who-more">Leer más →</span>
+      </div>
+    </article>
+
+    <article class="who-row r3 reveal" tabindex="0" role="button" data-modal="who3">
+      <div class="who-media"><img src="img/estudio-set-mariposa.jpg" alt="Set Butterfly"></div>
+      <div class="who-copy">
+        <div class="who-num">03 · El momento</div>
+        <h3>Te explotó un momento.</h3>
+        <p>Un programa, un video, una semana que no se va a repetir.</p>
+        <span class="who-more">Leer más →</span>
+      </div>
+    </article>
+
+    <article class="who-row r4 flip reveal" tabindex="0" role="button" data-modal="who4">
+      <div class="who-media"><img src="img/estudio-piso-podcast-bts.jpg" alt="Sala de podcast"></div>
+      <div class="who-copy">
+        <div class="who-num">04 · Lo tuyo</div>
+        <h3>Listo para vender lo tuyo.</h3>
+        <p>Cursos, webinars, talleres. El podcast es cómo te vuelves el experto.</p>
+        <span class="who-more">Leer más →</span>
+      </div>
+    </article>
+
+    <article class="who-row r5 reveal" tabindex="0" role="button" data-modal="who5">
+      <div class="who-media"><img src="img/estudio-vanity-led.jpg" alt="Vanity con luz LED"></div>
+      <div class="who-copy">
+        <div class="who-num">05 · En privado</div>
+        <h3>Ya te pagan en privado.</h3>
+        <p>Membresías, grupos, lo que se mueve en el DM. Pide máquina, no más likes.</p>
+        <span class="who-more">Leer más →</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="marcas">
+  <div class="wrap">
+    <span class="section-label reveal">Para marcas</span>
+    <h2 class="section-headline reveal">Tu producto, en vivo.<br><em>Vendido por caras con público.</em></h2>
+    <p class="lede reveal">Live shopping, UGC y menciones de podcast con las creadoras de la casa. Tú traes el producto. Nosotros ponemos las caras, el set y el reporte. Habla con el equipo y te armamos la campaña.</p>
+    <div class="hero-btns reveal" style="margin-top:28px">
+      <a class="btn-ghost" href="#aplicar">Hablar como marca</a>
+    </div>
+  </div>
+</section>
+
+<section id="oficio">
   <div class="wrap oficio-grid">
     <div class="oficio-sticky">
-      <span class="section-label reveal">Qué te ponemos</span>
-      <h2 class="section-headline reveal">Un equipo.<br><em>Un estudio.</em></h2>
-      <p class="lede reveal">Tú eres la cara. Nosotros cortamos, publicamos, contestamos y hacemos que se cobre.</p>
+      <span class="section-label reveal">El oficio</span>
+      <h2 class="section-headline reveal">Seis verbos.<br><em>Un equipo.</em></h2>
+      <p class="lede reveal">No coordinas freelancers por WhatsApp. Grabas, el piso de abajo publica, y las marcas llegan con contrato.</p>
     </div>
     <div>
       <article class="verb" tabindex="0">
         <div class="verb-head">
-          <div class="verb-name">Equipo</div>
-          <p class="verb-tease">Edición, clips, community. Todos los días.</p>
+          <div class="verb-name">Editar</div>
+          <p class="verb-tease">Contenido que no se queda en el drive.</p>
           <span class="verb-plus" aria-hidden="true">+</span>
         </div>
-        <div class="verb-extra"><p>El live o la grabación termina. El recorte sale. El chat se contesta. A ti te llega lo que vale.</p></div>
+        <div class="verb-extra"><p>Hooks, subtítulos, recortes de live. Community en el mismo piso. Lo rutinario se responde; a ti te llega lo que vale.</p></div>
       </article>
       <article class="verb" tabindex="0">
         <div class="verb-head">
-          <div class="verb-name">Estudio</div>
-          <p class="verb-tease">Sets, lives, podcast. En Laureles.</p>
+          <div class="verb-name">Cerrar</div>
+          <p class="verb-tease">Campañas que facturan.</p>
           <span class="verb-plus" aria-hidden="true">+</span>
         </div>
-        <div class="verb-extra"><p>20 escritorios. 10 sets. 10 streaming. Llegas, enciendes, creas. El piso no se para.</p></div>
+        <div class="verb-extra"><p>Pipeline, negociación, contrato y plata en la cuenta. Tú eres la cara. Nosotros hacemos que paguen.</p></div>
       </article>
       <article class="verb" tabindex="0">
         <div class="verb-head">
-          <div class="verb-name">Que cobre</div>
-          <p class="verb-tease">El oficio es que esto pague.</p>
+          <div class="verb-name">Transmitir</div>
+          <p class="verb-tease">La máquina alrededor del live.</p>
           <span class="verb-plus" aria-hidden="true">+</span>
         </div>
-        <div class="verb-extra"><p>Crecer la cuenta y convertirla en plata. Los números los habla el equipo, no esta página.</p></div>
+        <div class="verb-extra"><p>Clips el mismo día, DMs, marcas que sí encuentran a quién escribir. Tú enciendes. El resto no se queda parado.</p></div>
+      </article>
+      <article class="verb" tabindex="0">
+        <div class="verb-head">
+          <div class="verb-name">Lanzar</div>
+          <p class="verb-tease">Productos digitales, contigo.</p>
+          <span class="verb-plus" aria-hidden="true">+</span>
+        </div>
+        <div class="verb-extra"><p>Cursos y webinars, con tu voz. Tú pones el saber. Nosotros armamos oferta, página, calendario y el seguimiento.</p></div>
+      </article>
+      <article class="verb" tabindex="0">
+        <div class="verb-head">
+          <div class="verb-name">Abrir</div>
+          <p class="verb-tease">Cuentas en CO, MX y US.</p>
+          <span class="verb-plus" aria-hidden="true">+</span>
+        </div>
+        <div class="verb-extra"><p>Mismo talento, tres países, a tu nombre. Se abre cuando hay con qué llenarlo.</p></div>
+      </article>
+      <article class="verb" tabindex="0">
+        <div class="verb-head">
+          <div class="verb-name">Formalizar</div>
+          <p class="verb-tease">Empresa y papeles.</p>
+          <span class="verb-plus" aria-hidden="true">+</span>
+        </div>
+        <div class="verb-extra"><p>Sin teatro legal. Lo mínimo para cobrar bien y no mezclar tu plata con la de la casa.</p></div>
       </article>
     </div>
   </div>
@@ -142,11 +554,13 @@
 <section id="estudio">
   <div class="wrap">
     <span class="section-label reveal">El estudio</span>
-    <h2 class="section-headline reveal">La casa.<br><em>No un Airbnb con aros.</em></h2>
-    <p class="lede reveal">Laureles. Llegas, creas, te vas. El equipo se queda con el material.</p>
+    <h2 class="section-headline reveal">Una casa para grabar.<br><em>Gente para que escale.</em></h2>
+    <p class="lede reveal">En Laureles. Llegas, enciendes, te vas. El equipo se queda con el material. No es un Airbnb con aros de luz: es el piso donde ya se operan las cuentas. Un solo techo: equipo y set, juntos.</p>
+    <p class="studio-type" id="studioType" data-text="Llegas, enciendes, te vas."></p>
+    <p class="studio-quiet">20 escritorios · 10 sets · 10 puestos de live · un podcast</p>
   </div>
-  <button class="studio-featured" type="button" data-lb="0" aria-label="Abrir foto del estudio">
-    <img src="/img/estudio-piso-podcast-bts.jpg" alt="Piso de producción en Laureles">
+  <button class="studio-featured" type="button" data-lb="0" aria-label="Abrir foto del piso de producción">
+    <img src="img/estudio-piso-podcast-bts.jpg" alt="Piso de producción: sillas, cámaras y luces">
   </button>
   <div class="studio-marq" aria-hidden="true">
     <div class="studio-marq-track" id="marqA"></div>
@@ -156,28 +570,60 @@
   </div>
 </section>
 
+<section id="preguntas">
+  <div class="wrap">
+    <div class="faq">
+      <span class="section-label">Preguntas</span>
+      <h2 class="section-headline" style="font-size:clamp(32px,4vw,48px)">Lo que siempre preguntan.</h2>
+      <details>
+        <summary>¿Tengo que mudarme a la casa?</summary>
+        <p>No. El estudio está para producir. El equipo opera desde acá. Tú grabas cuando te sirve — o mandas material.</p>
+      </details>
+      <details>
+        <summary>¿Y si todavía no tengo audiencia?</summary>
+        <p>Empiezas en live. Comunidad todos los días. Las marcas y los cursos llegan cuando ya hay a quién venderle. No te echamos por estar empezando.</p>
+      </details>
+      <details>
+        <summary>¿Esto también es para streamers?</summary>
+        <p>Sí. Operamos clips, comunidad y deals alrededor de TikTok Live, Twitch, Kick o YouTube.</p>
+      </details>
+      <details>
+        <summary>¿Me van a armar un curso y desaparecer?</summary>
+        <p>No. Oferta, grabación, lanzamiento y seguimiento, con tu voz.</p>
+      </details>
+      <details>
+        <summary>¿De quién son las cuentas?</summary>
+        <p>Tuyas. Handles a tu nombre desde el día uno. Nosotros operamos.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta empezar?</summary>
+        <p>Nada. Cero cuota de entrada. Tu Live es 100% tuyo. Shop, UGC y lo que entra por tu comunidad son 50/50 con la casa.</p>
+      </details>
+      <details>
+        <summary>¿Y si no funciona, cómo salgo?</summary>
+        <p>Te vas. Las cuentas son tuyas desde el día uno — se quedan contigo, con todo lo publicado.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section id="aplicar">
-  <div class="wrap apply-split">
+  <div class="wrap voice-split">
     <div>
-      <span class="section-label">Sol</span>
-      <h2 class="section-headline">Pregúntale qué hacemos.<br><em>Cuatro minutos.</em></h2>
-      <p class="lede">Sol te cuenta la casa y toma tus datos. El equipo humano sigue por WhatsApp.</p>
+      <span class="section-label">Hablar</span>
+      <h2 class="section-headline">Una entrevista de voz.<br><em>Cuatro minutos.</em></h2>
+      <p class="lede">Sin formulario. Sol te pregunta tu handle, en qué momento estás y qué quieres construir — o el brief si eres marca. El equipo humano sigue por WhatsApp.</p>
+      <div class="lane-pick">
+        <span class="lane-pick-k" id="lanePickLabel">¿Qué te interesa? (opcional)</span>
+        <div class="lane-chips" role="group" aria-labelledby="lanePickLabel">
+          <button class="lane-chip" type="button" data-lane="live" aria-pressed="false">TikTok Live</button>
+          <button class="lane-chip" type="button" data-lane="shop" aria-pressed="false">TikTok Shop + UGC</button>
+          <button class="lane-chip" type="button" data-lane="comunidad" aria-pressed="false">Comunidad 24/7</button>
+        </div>
+      </div>
       <div class="hero-btns" style="margin-top:28px">
         <button class="btn-coral" type="button" id="btn-creador">Hablar con Sol</button>
-      </div>
-      <div class="faq apply-faq">
-        <details>
-          <summary>¿Tengo que tener muchos seguidores?</summary>
-          <p>No. Si ya tienes following, lo hacemos crecer y cobrar. Si todavía no, lo armamos. Lo que sí pedimos: que puedas venir y que quieras esto.</p>
-        </details>
-        <details>
-          <summary>¿Tengo que estar en Medellín?</summary>
-          <p>Sí. Lunes a viernes, en el estudio en Laureles.</p>
-        </details>
-        <details>
-          <summary>¿Qué tipos de creadores?</summary>
-          <p>Influencers, creadores de contenido, UGC. Toda la casa es talento.</p>
-        </details>
+        <button class="btn-ghost" type="button" id="btn-marca">Hablar como marca</button>
       </div>
     </div>
     <div>
@@ -188,33 +634,30 @@
           <button class="btn-ghost" type="button" id="btn-hang">Colgar</button>
         </div>
         <p class="note">Usa audífonos si puedes. Pedimos el micrófono solo para esta llamada.</p>
+        <p class="note">Te escribimos por WhatsApp en 24–48 h. ¿Sin micrófono? Dile al agente "mejor por escrito" y seguimos por texto.</p>
       </div>
-      <form class="apply-form" id="applyForm" style="margin-top:20px">
-        <p class="note" style="margin:0 0 4px">O déjanos esto y te escribimos.</p>
-        <label>Nombre
-          <input type="text" name="nombre" autocomplete="name" required>
-        </label>
-        <label>WhatsApp
-          <input type="tel" name="whatsapp" autocomplete="tel" required>
-        </label>
-        <label>Instagram o TikTok <span style="text-transform:none;letter-spacing:0;font-family:'DM Sans',sans-serif;color:var(--muted)">(si tienes)</span>
-          <input type="text" name="handle" autocomplete="off" placeholder="@tunombre">
-        </label>
-        <label>Ciudad
-          <input type="text" name="ciudad" autocomplete="address-level2" required>
-        </label>
-        <button class="btn-coral" type="submit" id="applyBtn">Enviar</button>
-        <p class="note" id="applyNote">No pedimos contraseñas.</p>
-      </form>
     </div>
   </div>
 </section>
 
 <footer>
   <a class="nav-logo" href="#inicio">LA CASA<span>.</span></a>
-  <div>comerciocreativo.com · Laureles</div>
-  <div>© 2026 Comercio Creativo</div>
+  <div>casacreadores.co · casacreadoras.co · Laureles, Medellín</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/casacreadores.co/" target="_blank" rel="noopener">Instagram · @casacreadores.co</a>
+    <a href="https://www.tiktok.com/@casacreadores.co" target="_blank" rel="noopener">TikTok · @casacreadores.co</a>
+  </div>
+  <div>© 2026 Comercio Creativo S.A.S. · NIT 901.474.608-1</div>
 </footer>
+
+<div class="modal-overlay" id="modalOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" id="modalClose" aria-label="Cerrar">×</button>
+    <div class="modal-kicker" id="modalKicker"></div>
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody"></div>
+  </div>
+</div>
 
 <div class="lightbox" id="lightbox" hidden>
   <button class="lb-btn lb-close" type="button" id="lbClose" aria-label="Cerrar">×</button>
@@ -224,40 +667,213 @@
   <div class="lb-count" id="lbCount"></div>
 </div>
 
-<script src="/voice.js"></script>
-<script src="/site.js"></script>
+<script src="voice.js"></script>
 <script>
-document.getElementById("btn-creador").addEventListener("click", function () {
-  CasaVoice.start("creador");
+const MODALS = {
+  who1: {
+    kicker: "01 · Ya creciste",
+    title: "Ya creciste. El negocio, no.",
+    body: "<p>Hay creadoras con público de verdad que nunca armaron el oficio de cobrar. Editaron de madrugada, contestaron DMs, y el mes se fue en likes. Nosotros entramos ahí. Tú eres la cara. El piso de abajo opera.</p>"
+  },
+  who2: {
+    kicker: "02 · En vivo",
+    title: "Vives en el live.",
+    body: "<p>Horas al aire y, cuando cortas, el recorte no sale y las marcas no saben a quién escribir. Operamos clips el mismo día, comunidad y deals. Si tu gente te encuentra en vivo, esa es la puerta. No te pedimos que te vuelvas un canal de reels.</p>"
+  },
+  who3: {
+    kicker: "03 · El momento",
+    title: "Sales de un momento.",
+    body: "<p>Un reality, un concurso, un video que explota. En tres meses, si nadie opera, se van. Si el público ya llegó, lo sostenemos antes de que se enfríe. Si todavía estás construyendo, el camino es el live — también hay silla.</p>"
+  },
+  who4: {
+    kicker: "04 · Lo tuyo",
+    title: "Listo para vender lo tuyo.",
+    body: "<p>Tu gente ya te cree. El siguiente paso no es otro reel: es algo que se paga. Una forma de posicionarte es el podcast: entrevistar a quien ya sabe te pone a ti en esa mesa, y desde ahí se puede vender un curso o un taller. Lo armamos contigo. Oferta, grabación, página, lanzamiento. Tú pones la voz. No somos un molino de plantillas.</p>"
+  },
+  who5: {
+    kicker: "05 · En privado",
+    title: "Ya te pagan en privado.",
+    body: "<p>Hay creadoras cuya audiencia ya paga. Eso pide más cuidado, no menos operación: calendario, soporte, cobro, contenido que no se cae cuando apagas el teléfono. Si esa parte de tu negocio ya existe — o la quieres construir en serio — hay silla. Una implicación, no un anuncio.</p>"
+  }
+};
+
+const STUDIO = [
+  "img/estudio-piso-podcast-bts.jpg",
+  "img/estudio-lounge-warm.jpg",
+  "img/estudio-vanity-led.jpg",
+  "img/estudio-escritorio-rosa-1.jpg",
+  "img/estudio-escritorio-rosa-2.jpg",
+  "img/estudio-lounge-ambar.jpg",
+  "img/estudio-nook-lectura.jpg",
+  "img/estudio-camara-sony.jpg",
+  "img/estudio-set-mariposa.jpg"
+];
+const MARQ_A = STUDIO.slice(1);
+const MARQ_B = STUDIO.slice(1).reverse();
+
+function fillMarq(el, list){
+  const loop = list.concat(list);
+  el.innerHTML = loop.map((src, i) => {
+    const idx = STUDIO.indexOf(src);
+    return '<button type="button" data-lb="'+idx+'"><img src="'+src+'" alt=""></button>';
+  }).join("");
+}
+fillMarq(document.getElementById("marqA"), MARQ_A);
+fillMarq(document.getElementById("marqB"), MARQ_B);
+
+const menuBtn = document.getElementById("menuBtn");
+const navMobile = document.getElementById("navMobile");
+function closeMenu(){
+  menuBtn.classList.remove("is-open");
+  navMobile.classList.remove("is-open");
+  menuBtn.setAttribute("aria-expanded","false");
+  document.body.style.overflow = "";
+}
+menuBtn.addEventListener("click", () => {
+  const open = !navMobile.classList.contains("is-open");
+  menuBtn.classList.toggle("is-open", open);
+  navMobile.classList.toggle("is-open", open);
+  menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  document.body.style.overflow = open ? "hidden" : "";
 });
-document.getElementById("btn-hang").addEventListener("click", function () {
+navMobile.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+let laneChoice = "";
+const laneChips = document.querySelectorAll(".lane-chip");
+laneChips.forEach(chip => {
+  chip.addEventListener("click", () => {
+    const wasOn = chip.classList.contains("is-on");
+    laneChips.forEach(c => { c.classList.remove("is-on"); c.setAttribute("aria-pressed", "false"); });
+    if (wasOn) {
+      laneChoice = "";
+    } else {
+      chip.classList.add("is-on");
+      chip.setAttribute("aria-pressed", "true");
+      laneChoice = chip.dataset.lane;
+    }
+  });
+});
+
+document.getElementById("btn-creador").addEventListener("click", () => CasaVoice.start("creador", laneChoice));
+document.getElementById("btn-marca").addEventListener("click", () => CasaVoice.start("marca", laneChoice));
+document.getElementById("btn-hang").addEventListener("click", () => {
   CasaVoice.stop();
   document.getElementById("voice-status").textContent = "Llamada cerrada.";
 });
-document.getElementById("applyForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-  const btn = document.getElementById("applyBtn");
-  const note = document.getElementById("applyNote");
-  const data = Object.fromEntries(new FormData(e.target).entries());
-  data.tipo = "creador";
-  data.fuente = "recruit-landing";
-  btn.disabled = true;
-  btn.textContent = "Enviando…";
-  try {
-    const r = await fetch("/lead", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-    if (!r.ok) throw new Error("fail");
-    note.textContent = "Listo. Te escribimos por WhatsApp.";
-    e.target.reset();
-  } catch (err) {
-    note.textContent = "No se pudo enviar. Intenta de nuevo.";
-  }
-  btn.disabled = false;
-  btn.textContent = "Enviar";
+
+const overlay = document.getElementById("modalOverlay");
+function openModal(id){
+  const d = MODALS[id];
+  if (!d) return;
+  document.getElementById("modalKicker").textContent = d.kicker;
+  document.getElementById("modalTitle").textContent = d.title;
+  document.getElementById("modalBody").innerHTML = d.body;
+  overlay.hidden = false;
+  requestAnimationFrame(() => overlay.classList.add("is-open"));
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  overlay.classList.remove("is-open");
+  document.body.style.overflow = "";
+  setTimeout(() => { overlay.hidden = true; }, 300);
+}
+document.querySelectorAll("[data-modal]").forEach(el => {
+  el.addEventListener("click", () => openModal(el.dataset.modal));
+  el.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(el.dataset.modal); }
+  });
 });
+document.getElementById("modalClose").addEventListener("click", closeModal);
+overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+
+document.querySelectorAll(".verb").forEach(row => {
+  row.addEventListener("click", () => row.classList.toggle("open"));
+  row.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); row.classList.toggle("open"); }
+  });
+});
+
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+const lbCount = document.getElementById("lbCount");
+let lbIndex = 0;
+function showLb(i){
+  lbIndex = (i + STUDIO.length) % STUDIO.length;
+  lbImg.src = STUDIO[lbIndex];
+  lbCount.textContent = (lbIndex + 1) + " / " + STUDIO.length;
+}
+function openLb(i){
+  showLb(i);
+  lb.hidden = false;
+  requestAnimationFrame(() => lb.classList.add("is-open"));
+  document.body.style.overflow = "hidden";
+}
+function closeLb(){
+  lb.classList.remove("is-open");
+  document.body.style.overflow = "";
+  setTimeout(() => { lb.hidden = true; }, 300);
+}
+document.addEventListener("click", e => {
+  const btn = e.target.closest("[data-lb]");
+  if (btn) openLb(+btn.dataset.lb);
+});
+document.getElementById("lbClose").addEventListener("click", closeLb);
+document.getElementById("lbPrev").addEventListener("click", () => showLb(lbIndex - 1));
+document.getElementById("lbNext").addEventListener("click", () => showLb(lbIndex + 1));
+lb.addEventListener("click", e => { if (e.target === lb) closeLb(); });
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") { closeMenu(); closeModal(); closeLb(); }
+  if (!lb.classList.contains("is-open")) return;
+  if (e.key === "ArrowLeft") showLb(lbIndex - 1);
+  if (e.key === "ArrowRight") showLb(lbIndex + 1);
+});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.08 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+let counted = false;
+const statsBar = document.getElementById("statsBar");
+const statsIo = new IntersectionObserver(entries => {
+  if (!entries[0].isIntersecting || counted) return;
+  counted = true;
+  statsBar.classList.add("is-counting");
+  statsBar.querySelectorAll("[data-count]").forEach(el => {
+    const end = +el.dataset.count;
+    const start = performance.now();
+    const dur = 1100;
+    const tick = now => {
+      const t = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(end * eased);
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+}, { threshold: 0.35 });
+statsIo.observe(statsBar);
+
+const typeEl = document.getElementById("studioType");
+let typed = false;
+const typeIo = new IntersectionObserver(entries => {
+  if (!entries[0].isIntersecting || typed) return;
+  typed = true;
+  const text = typeEl.dataset.text;
+  let i = 0;
+  const step = () => {
+    typeEl.textContent = text.slice(0, i);
+    i++;
+    if (i <= text.length) setTimeout(step, 42);
+  };
+  step();
+}, { threshold: 0.4 });
+typeIo.observe(typeEl);
 </script>
+
+<!-- Manychat -->
+<script src="//widget.manychat.com/5552003_5e786.js" defer="defer"></script>
+<script src="https://mccdn.me/assets/js/widget.js" defer="defer"></script>
 </body>
 </html>

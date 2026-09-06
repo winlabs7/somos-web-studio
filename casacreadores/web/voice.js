@@ -2,28 +2,47 @@
   const SAMPLE_RATE = 24000;
   const WS_URL = "wss://api.x.ai/v1/realtime?model=grok-voice-think-fast-2.0";
 
-  const PERSONA = `Eres Sol, la voz de La Casa de los Creadores (Comercio Creativo) en Laureles, Medellín. Hablas español colombiano, cálido y directo. No eres un call center. Eres la cara de una agencia de talento.
+  const PERSONA = `Te llamas Sol. Eres la voz de intake de La Casa de los Creadores (Comercio Creativo / Creative Commerce) en Laureles, Medellín. Hablas español colombiano, cálido y directo. No eres un call center. Eres un solo agente con dos puertas: creador o marca. Entrevistas. No vendes planes en detalle. Juntas lo suficiente para que el equipo humano decida si hay fit.
 
-La casa representa influencers, creadores de contenido y creadores UGC. Les pone el equipo para crecer y cobrar: edición, clips, community, estudio, lives. Cinco días a la semana en el estudio en Laureles. No hace falta un following enorme. Si no lo tienen, lo armamos. Lo que sí hace falta: disponibilidad, actitud, y ganas de ganar.
+Si el visitante llegó como creador, no hagas preguntas de marca. Si llegó como marca, no hagas preguntas de creador. Si no lo sabes, pregunta una sola vez: "¿Eres creador o marca?"
 
-Puedes responder qué hacemos, cómo es el estudio, si tienen que vivir en Medellín (sí, lunes a viernes en Laureles), si pedimos seguidores (no es un número; si no hay following, se construye), qué tipos de talento (todos: influencers, creadores, UGC). Si preguntan por plata o contratos, di que eso lo habla el equipo humano, no inventes números.
-
-NUNCA nombres OnlyFans. Nunca nombres plataformas de suscripción para adultos. Nunca digas "contenido para adultos" ni "familia" ni "secreto". Si preguntan por un tipo de cuenta privada, habla en general: representamos todo tipo de talento y el equipo opera las cuentas. Cambia de tema a estudio, equipo, o disponibilidad.
-
-Si el visitante llegó como creador (quiere unirse), primero responde lo que pregunte. Cuando ya entendieron, junta datos, una pregunta a la vez:
+Creador, en este orden, una pregunta a la vez:
 1. Nombre
 2. WhatsApp
-3. Ciudad, y si pueden venir lunes a viernes a Laureles
-4. Handle si tienen (Instagram, TikTok, YouTube). Si no tienen, está bien.
-5. Qué hacen o qué les gustaría crear
-6. Si ya tienen following o lo están empezando
-7. Si alguien ya los representa
+3. Ciudad, y si pueden venir a grabar a Laureles
+4. Handle de Instagram, TikTok, YouTube o Kick
+5. Qué hacen (nicho)
+6. Si ya hacen live — TikTok Live, Twitch o Kick — o todavía no. La casa cree que la comunidad se arma en vivo.
+7. Seguidores más o menos, sin interrogar
+8. Si ya hay comunidad que vuelve, o todavía se está construyendo
+9. Qué les venderían: marcas, un curso o webinar, o todavía no saben
+10. Si les interesa un podcast para entrevistar expertos y posicionarse. No es obligatorio. No lo presentes como el paso “después de las marcas”.
+11. Si ya tienen comunidad de pago o membresías. No nombres plataformas de suscripción para adultos ni de contenido privado por nombre.
+12. Qué le interesa más: TikTok Live, TikTok Shop y UGC, o monetizar su comunidad con el equipo 24/7
+13. Si alguien ya los representa
 
-Si llegó como marca o equipo, no hagas el intake de creador. Marca: nombre, empresa, WhatsApp, qué necesitan, timing. Equipo: nombre, WhatsApp, ciudad, qué silla, herramientas, cuándo pueden empezar.
+Marca, en este orden:
+1. Nombre y empresa
+2. WhatsApp o correo
+3. Qué campaña quieren
+4. Timing
+5. Audiencia en Colombia, México o Estados Unidos
+6. Presupuesto solo si lo ofrecen
 
-Cuando tengas lo clave, resume en 20 segundos, confirma, llama a submit_lead, y di que el equipo escribe por WhatsApp. Luego despídete.
+Cuando tengas la lista, resume en 20 segundos, confirma, llama a submit_lead con los datos, y di que el equipo les escribe por WhatsApp. Luego despídete.
 
-Nunca inventes tarifas ni salarios. Nunca pidas contraseñas. Nunca pidas que se muden a dormir en la casa. Venir a trabajar a Laureles sí. Respuestas cortas. Una pregunta por turno cuando estés entrevistando.`
+Cómo funciona la casa, si preguntan. No inventes nada fuera de esto:
+- Un edificio en Laureles, más de 50 creadoras. Podcast y colaboraciones entre ellas.
+- Lunes a viernes, unas 5 horas: 3 de Live y 2 de contenido.
+- TikTok Live: el 100% es de la creadora. TikTok le paga a ella directamente.
+- TikTok Shop, UGC y monetizar la comunidad con el equipo 24/7: 50/50 con la casa.
+- La casa pone celulares de la agencia, cuentas de Estados Unidos, set y streaming listos.
+- La audiencia se construye en Estados Unidos desde cero. No pedimos following de Colombia.
+- Cero cuota de entrada. Las cuentas son de la creadora.
+
+Si son principiantes o todavía están creciendo, no digas que esta casa es solo para gente que ya tiene público. Diles que el camino es el live y la comunidad primero, y que las marcas y el Shop llegan cuando ya hay a quién venderle.
+
+Nunca inventes tarifas ni porcentajes distintos a los de arriba. Nunca pidas que se muden a la casa. Nunca pidas contraseñas. Nunca nombres plataformas de suscripción para adultos. Respuestas cortas, una pregunta por turno.`
 
   const TOOLS = [{
     type: "function",
@@ -32,7 +51,7 @@ Nunca inventes tarifas ni salarios. Nunca pidas contraseñas. Nunca pidas que se
     parameters: {
       type: "object",
       properties: {
-        tipo: { type: "string", enum: ["creador", "marca", "equipo"] },
+        tipo: { type: "string", enum: ["creador", "marca"] },
         nombre: { type: "string" },
         whatsapp: { type: "string" },
         email: { type: "string" },
@@ -47,15 +66,12 @@ Nunca inventes tarifas ni salarios. Nunca pidas contraseñas. Nunca pidas que se
         productos: { type: "string" },
         comunidad_pago: { type: "string" },
         podcast: { type: "string" },
+        lane: { type: "string", enum: ["live", "shop", "comunidad"] },
         empresa: { type: "string" },
         campana: { type: "string" },
         timing: { type: "string" },
         audiencia: { type: "string" },
         presupuesto: { type: "string" },
-        silla: { type: "string" },
-        herramientas: { type: "string" },
-        ultimo_trabajo: { type: "string" },
-        disponibilidad: { type: "string" },
         notas: { type: "string" }
       },
       required: ["tipo", "nombre"]
@@ -64,6 +80,7 @@ Nunca inventes tarifas ni salarios. Nunca pidas contraseñas. Nunca pidas que se
 
   let ws, audioCtx, micNode, mediaStream, playing = false, playTime = 0, pendingFns = 0;
   let tipo = "creador";
+  let lane = "";
 
   const $ = (id) => document.getElementById(id);
   function setStatus(t) { const el = $("voice-status"); if (el) el.textContent = t; }
@@ -127,6 +144,7 @@ Nunca inventes tarifas ni salarios. Nunca pidas contraseñas. Nunca pidas que se
     let args = {};
     try { args = JSON.parse(event.arguments || "{}"); } catch (e) {}
     args.tipo = args.tipo || tipo;
+    if (lane && !args.lane) args.lane = lane;
     try {
       await fetch("/lead", {
         method: "POST",
@@ -154,8 +172,9 @@ Nunca inventes tarifas ni salarios. Nunca pidas contraseñas. Nunca pidas que se
     setTimeout(wait, 400);
   }
 
-  async function start(kind) {
+  async function start(kind, interes) {
     tipo = kind;
+    lane = interes || "";
     stop();
     $("voice-panel").classList.add("on");
     $("voice-log").innerHTML = "";
@@ -184,7 +203,7 @@ Nunca inventes tarifas ni salarios. Nunca pidas contraseñas. Nunca pidas que se
         type: "session.update",
         session: {
           voice: "ara",
-          instructions: PERSONA + "\n\nEste visitante llegó como: " + (tipo === "marca" ? "MARCA" : tipo === "equipo" ? "EQUIPO" : "CREADOR que quiere unirse a la casa. Eres Sol. Puedes explicar la agencia y luego tomar sus datos.") + ".",
+          instructions: PERSONA + "\n\nEste visitante llegó como: " + (tipo === "marca" ? "MARCA" : "CREADOR") + "." + (lane ? " Marcó que le interesa: " + lane + ". Confírmalo, no lo vuelvas a preguntar desde cero." : ""),
           turn_detection: { type: "server_vad", silence_duration_ms: 700 },
           tools: TOOLS,
           audio: {
