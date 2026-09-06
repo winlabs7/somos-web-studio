@@ -109,10 +109,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .path-left p{color:var(--gray)}
 .path-left h3 em{font-style:normal;background:linear-gradient(135deg,#BF3028,#D4AF55);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .path-right{color:#fff}
-.path-right .path-bg{position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(8,8,8,.55),rgba(8,8,8,.78)),
-  url('img/estudio-set-streaming-perfume.jpg') center/cover no-repeat;
-  transform:scale(1.04)}
 .path-right .path-inner{position:relative;z-index:1}
 .path-right .path-kicker{color:#E8C97A}
 .path-right p{color:#E4DDD6}
@@ -179,7 +175,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .lb-next{right:24px;top:50%;transform:translateY(-50%)}
 .lb-count{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'DM Mono',monospace;font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.1em}
 
-#planes{background:var(--bg2)}
+#preguntas{background:var(--bg2)}
 .plans{display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:16px;margin-top:48px;align-items:stretch}
 .plan{background:var(--bg3);border:1px solid var(--border);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;color:var(--white)}
 .plan.side{opacity:.88;transform:translateY(18px)}
@@ -195,7 +191,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .plan li::before{content:'';position:absolute;left:0;top:15px;width:7px;height:7px;border-radius:50%;background:var(--muted)}
 .plan.featured li::before{background:var(--gold)}
 
-.faq{margin-top:80px;max-width:760px}
+.faq{margin-top:0;max-width:760px}
 .faq details{border-bottom:1px solid var(--border);padding:18px 0}
 .faq summary{cursor:pointer;font-weight:600;list-style:none;color:var(--white)}
 .faq summary::-webkit-details-marker{display:none}
@@ -227,7 +223,6 @@ footer a{color:var(--gray);text-decoration:none}
 footer a:hover{color:var(--coral)}
 
 .stat-number.is-word{font-size:clamp(30px,3.2vw,46px)}
-.stats-foot{max-width:1280px;margin:32px auto 0;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6f6864}
 
 #formas{background:var(--bg2)}
 .lane-day{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;padding-top:32px;border-top:1px solid var(--border)}
@@ -300,7 +295,6 @@ footer a:hover{color:var(--coral)}
     <a class="nav-link" href="#formas">Formas</a>
     <a class="nav-link" href="#oficio">Oficio</a>
     <a class="nav-link" href="#estudio">Estudio</a>
-    <a class="nav-link" href="#planes">Planes</a>
     <a class="nav-cta" href="#aplicar">Aplicar · 4 min</a>
   </div>
   <button class="nav-hamburger" id="menuBtn" type="button" aria-label="Menú" aria-expanded="false">
@@ -314,7 +308,6 @@ footer a:hover{color:var(--coral)}
   <a href="#formas">Formas</a>
   <a href="#oficio">Oficio</a>
   <a href="#estudio">Estudio</a>
-  <a href="#planes">Planes</a>
   <a href="#aplicar">Aplicar</a>
   <a class="nav-mobile-cta" href="#aplicar">Aplicar · 4 min</a>
 </div>
@@ -367,7 +360,6 @@ footer a:hover{color:var(--coral)}
       <div class="stat-note">todas trabajando en marca + comunidad</div>
     </div>
   </div>
-  <div class="stats-foot">Más de $500 millones COP al mes en la casa · más de USD 100.000</div>
 </div>
 
 <section id="formas">
@@ -447,7 +439,7 @@ footer a:hover{color:var(--coral)}
     </article>
 
     <article class="who-row r2 flip reveal" tabindex="0" role="button" data-modal="who2">
-      <div class="who-media"><img src="img/estudio-set-streaming-perfume.jpg" alt="Set de streaming"></div>
+      <div class="who-media"><img src="img/estudio-camara-sony.jpg" alt="Cámara en trípode en el set"></div>
       <div class="who-copy">
         <div class="who-num">02 · En vivo</div>
         <h3>Vives en el live.</h3>
@@ -457,7 +449,7 @@ footer a:hover{color:var(--coral)}
     </article>
 
     <article class="who-row r3 reveal" tabindex="0" role="button" data-modal="who3">
-      <div class="who-media"><img src="img/estudio-set-beauty-live.jpg" alt="Set de beauty en vivo"></div>
+      <div class="who-media"><img src="img/estudio-set-mariposa.jpg" alt="Set Butterfly"></div>
       <div class="who-copy">
         <div class="who-num">03 · El momento</div>
         <h3>Te explotó un momento.</h3>
@@ -467,7 +459,7 @@ footer a:hover{color:var(--coral)}
     </article>
 
     <article class="who-row r4 flip reveal" tabindex="0" role="button" data-modal="who4">
-      <div class="who-media"><img src="img/estudio-podcast-1.jpg" alt="Sala de podcast"></div>
+      <div class="who-media"><img src="img/estudio-piso-podcast-bts.jpg" alt="Sala de podcast"></div>
       <div class="who-copy">
         <div class="who-num">04 · Lo tuyo</div>
         <h3>Listo para vender lo tuyo.</h3>
@@ -492,7 +484,7 @@ footer a:hover{color:var(--coral)}
   <div class="wrap">
     <span class="section-label reveal">Para marcas</span>
     <h2 class="section-headline reveal">Tu producto, en vivo.<br><em>Vendido por caras con público.</em></h2>
-    <p class="lede reveal">Live shopping, UGC y menciones de podcast con los creadores de la casa. Tú traes el producto. Nosotros ponemos las caras, el set y el reporte. Habla con el equipo y te armamos la campaña.</p>
+    <p class="lede reveal">Live shopping, UGC y menciones de podcast con las creadoras de la casa. Tú traes el producto. Nosotros ponemos las caras, el set y el reporte. Habla con el equipo y te armamos la campaña.</p>
     <div class="hero-btns reveal" style="margin-top:28px">
       <a class="btn-ghost" href="#aplicar">Hablar como marca</a>
     </div>
@@ -578,48 +570,8 @@ footer a:hover{color:var(--coral)}
   </div>
 </section>
 
-<section id="planes">
+<section id="preguntas">
   <div class="wrap">
-    <span class="section-label reveal">Planes</span>
-    <h2 class="section-headline reveal">Representación y expansión.<br><em>Cero cuota de entrada.</em></h2>
-    <p class="lede reveal">Comisión, o comisión más operación, o sociedad. Tú eres dueño de las cuentas desde el día uno.</p>
-    <div class="plans">
-      <article class="plan side reveal">
-        <h3>Representación</h3>
-        <div class="price">20%</div>
-        <p class="muted">Solo comisión. Cero si no hay deal.</p>
-        <ul>
-          <li>Marcas, contratos y cobro</li>
-          <li>Tú operas el contenido</li>
-          <li>Para quien ya tiene ritmo y quiere pipeline</li>
-        </ul>
-        <a class="btn-ghost" href="#aplicar">Hablar</a>
-      </article>
-      <article class="plan featured reveal">
-        <div class="plan-badge">El más pedido</div>
-        <h3>Expansión</h3>
-        <div class="price">$6–12 millones/mes</div>
-        <p class="muted">+ 15% de comisión. Menos comisión porque la operación ya está paga.</p>
-        <ul>
-          <li>Clipping, comunidad, calendario</li>
-          <li>Cuentas por país cuando toque</li>
-          <li>Marcas encima de la operación</li>
-        </ul>
-        <a class="btn-coral" href="#aplicar">Hablar</a>
-      </article>
-      <article class="plan side reveal">
-        <h3>Socios</h3>
-        <div class="price">10% + participación</div>
-        <p class="muted">Menos comisión. Participación en lo que lancemos juntos.</p>
-        <ul>
-          <li>Para 3–5 talentos, no para todos</li>
-          <li>Productos con tu marca</li>
-          <li>Se construye. No se aplica masivo.</li>
-        </ul>
-        <a class="btn-ghost" href="#aplicar">Hablar</a>
-      </article>
-    </div>
-
     <div class="faq">
       <span class="section-label">Preguntas</span>
       <h2 class="section-headline" style="font-size:clamp(32px,4vw,48px)">Lo que siempre preguntan.</h2>
@@ -645,7 +597,7 @@ footer a:hover{color:var(--coral)}
       </details>
       <details>
         <summary>¿Cuánto cuesta empezar?</summary>
-        <p>Nada. Cero cuota de entrada: comisión, o comisión más operación, o sociedad. Tú eliges la forma.</p>
+        <p>Nada. Cero cuota de entrada. Tu Live es 100% tuyo. Shop, UGC y lo que entra por tu comunidad son 50/50 con la casa.</p>
       </details>
       <details>
         <summary>¿Y si no funciona, cómo salgo?</summary>
@@ -721,7 +673,7 @@ const MODALS = {
   who1: {
     kicker: "01 · Ya creciste",
     title: "Ya creciste. El negocio, no.",
-    body: "<p>Hay creadores con público de verdad que nunca armaron el oficio de cobrar. Editaron de madrugada, contestaron DMs, y el mes se fue en likes. Nosotros entramos ahí. Tú eres la cara. El piso de abajo opera.</p>"
+    body: "<p>Hay creadoras con público de verdad que nunca armaron el oficio de cobrar. Editaron de madrugada, contestaron DMs, y el mes se fue en likes. Nosotros entramos ahí. Tú eres la cara. El piso de abajo opera.</p>"
   },
   who2: {
     kicker: "02 · En vivo",
@@ -741,29 +693,23 @@ const MODALS = {
   who5: {
     kicker: "05 · En privado",
     title: "Ya te pagan en privado.",
-    body: "<p>Hay creadores cuya audiencia ya paga. Eso pide más cuidado, no menos operación: calendario, soporte, cobro, contenido que no se cae cuando apagas el teléfono. Si esa parte de tu negocio ya existe — o la quieres construir en serio — hay silla. Una implicación, no un anuncio.</p>"
+    body: "<p>Hay creadoras cuya audiencia ya paga. Eso pide más cuidado, no menos operación: calendario, soporte, cobro, contenido que no se cae cuando apagas el teléfono. Si esa parte de tu negocio ya existe — o la quieres construir en serio — hay silla. Una implicación, no un anuncio.</p>"
   }
 };
 
 const STUDIO = [
   "img/estudio-piso-podcast-bts.jpg",
   "img/estudio-lounge-warm.jpg",
-  "img/estudio-set-streaming-perfume.jpg",
-  "img/estudio-set-beauty-live.jpg",
-  "img/estudio-podcast-1.jpg",
   "img/estudio-vanity-led.jpg",
-  "img/estudio-estanteria-beauty.jpg",
   "img/estudio-escritorio-rosa-1.jpg",
   "img/estudio-escritorio-rosa-2.jpg",
   "img/estudio-lounge-ambar.jpg",
   "img/estudio-nook-lectura.jpg",
-  "img/estudio-podcast-2.jpg",
   "img/estudio-camara-sony.jpg",
-  "img/estudio-set-mariposa-en-uso.jpg",
   "img/estudio-set-mariposa.jpg"
 ];
-const MARQ_A = STUDIO.slice(1, 8);
-const MARQ_B = STUDIO.slice(8);
+const MARQ_A = STUDIO.slice(1);
+const MARQ_B = STUDIO.slice(1).reverse();
 
 function fillMarq(el, list){
   const loop = list.concat(list);
